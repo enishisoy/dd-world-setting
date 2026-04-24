@@ -1,0 +1,296 @@
+{
+  "WORLD_RULES": {
+    "version": "v1.4_FULL",
+    "document_role": "FULL_CANONICAL",
+    "authority": {
+      "status": "canonical",
+      "scope": "operational_world_rules"
+    },
+    "terminology": {
+      "tokai": "撓界（とうかい）",
+      "doctrine": {
+        "in_text": "教義",
+        "ruby": "ドグマ",
+        "formal": "撓界現象"
+      },
+      "factor": "外界因子（1〜9）",
+      "seat": {
+        "in_text": "席",
+        "ruby": "アウターマキナ",
+        "formal": "外界機構"
+      }
+    },
+    "absolute_limits": [
+      "席は自己複製しない",
+      "席は指数増殖しない",
+      "新たな席は生成されない",
+      "一人のIDOが保持できる教義は原則1つまで",
+      "死の不可逆性は維持される（終端原理に従う）",
+      "席の完全消滅は例外的現象であり、通常は発生しない"
+    ],
+    "seat_management_states": {
+      "managed": {
+        "definition": "管理者または明確な世界秩序の下にあり、観測・制御・停止条件が定義されている状態。",
+        "properties": [
+          "挙動が予測可能",
+          "世界構造との衝突が抑制される"
+        ]
+      },
+      "unmanaged": {
+        "definition": "管理者の消滅・離脱・機能停止により、世界ルールから逸脱した状態。",
+        "trigger_conditions": [
+          "管理者消滅（例：クナド）",
+          "管理権限断絶",
+          "席論理の破綻（因子組崩壊・誤接続）"
+        ]
+      }
+    },
+    "unmanaged_core_principles": {
+      "non_determinism": {
+        "description": "未管理席の挙動は予測不能であり、安定・破滅・停滞のいずれにも固定されない。"
+      },
+      "no_self_replication": true,
+      "no_new_creation": true,
+      "limited_human_intervention": {
+        "description": "未管理状態であっても、人間の判断・関係性・選択が挙動に影響を与える余地は否定されない。",
+        "scope": [
+          "住処の提供",
+          "距離の確保",
+          "接触頻度の制御",
+          "関係性の選択"
+        ],
+        "limitation": "管理権限の回復を意味しない。観測・停止・再設計は行えない。"
+      }
+    },
+    "unmanaged_behavior_patterns": {
+      "latent": "休眠・沈降",
+      "fixation": "単一対象への結果駆動固定",
+      "collision": "世界構造との衝突（高リスク）",
+      "self_termination": "内部論理破綻による自壊"
+    },
+    "factor_rule": {
+      "root_seats": {
+        "range": "S-1〜S-9",
+        "rule": "単因子前提"
+      },
+      "composite_factor_effect": {
+        "description": "複合因子で着座した場合、挙動は原理的に予測不能となる。無反応／拒絶／即時暴走／追加教義異常発生／バックファイヤ／世界修正力が起こり得る。",
+        "prohibition": "根源席は複合因子による着座を運用上禁止とする"
+      }
+    },
+    "factor_set_reconfiguration": {
+      "definition": "宿主が本来対応しない席に強制接続した場合、因子組のみが再編・破壊・誤接続される。",
+      "invariants": [
+        "席番号は固定",
+        "因子組のみ変質",
+        "宿主因子を優先参照"
+      ],
+      "canonical_case": {
+        "seat": "S-18 レティ",
+        "transitions": [
+          "6+5+7（煉獄）",
+          "9+5+4（断罪）"
+        ]
+      }
+    },
+    "simultaneous_seat_use": {
+      "base_rule": "同時使用は原則不可能であり、試行したIDOは世界修正力により消滅し得る。",
+      "exception": {
+        "description": "外界侵食が極度に進行した存在のみ、短時間成立する場合がある。",
+        "limitation": [
+          "崩壊は確実",
+          "耐性ではなく猶予",
+          "戦闘可能時間は極短",
+          "再現性はない"
+        ]
+      }
+    },
+    "seat_presence_layers": {
+      "factor_layer": {
+        "name": "因子層",
+        "description": "席が物理実体を持たず、因子・認識・翻訳のレイヤーとして存在する状態。IDO（および因子層に到達しつつある者）には観測され得る。",
+        "visibility": {
+          "to_ido": "可（到達段階により濃淡あり）",
+          "to_general": "不可"
+        },
+        "interaction": {
+          "dialogue": "可/不可は席個体差および宿主依存",
+          "physical_contact": "不可"
+        }
+      },
+      "physical_layer": {
+        "name": "物理層",
+        "description": "席が実体として顕在化し、周囲の通常物理と相互作用する状態。",
+        "visibility": {
+          "to_ido": "可",
+          "to_general": "可（顕現条件に依存）"
+        },
+        "interaction": {
+          "dialogue": "可/不可は席個体差",
+          "physical_contact": "可"
+        }
+      }
+    },
+    "seat_operation_classes": {
+      "manifestation": {
+        "label": "顕現式",
+        "core": "席は呼び出しにより物理層へ現れ、解除で消える運用。",
+        "default_layer": "物理層（呼び出し時のみ）",
+        "persistence": "非常駐（解除可能）",
+        "notes": [
+          "装置・条件・概念として扱いやすい",
+          "感情/会話が欠けやすい（例外あり）"
+        ]
+      },
+      "independent": {
+        "label": "独立式",
+        "core": "席は原則として物理層に常駐し、実体として固定される。IDOが任意に解除して消すことはできない。",
+        "default_layer": "物理層（常駐）",
+        "persistence": "常駐（解除不可）",
+        "fall_rule": "撃破時は因子層へ後退し得る"
+      },
+      "assimilation": {
+        "label": "同化式",
+        "core": "席が宿主へ重なることで戦闘形態・出力を成立させる運用。",
+        "default_layer": "因子層待機→条件で物理層顕現",
+        "persistence": "条件依存",
+        "alias_policy": {
+          "note": "旧呼称「纏鎧式」は同義として扱い、表記は「同化式」に統一する。"
+        }
+      }
+    },
+    "independent_seat_fall_and_rebuild": {
+      "description": "独立式の席は通常は物理層に常駐するが、致命的損壊を受けると一時的に因子層へ後退する。",
+      "partial_damage": {
+        "description": "首切断・四肢欠損などでは即後退しない場合がある",
+        "result": "損壊状態で活動継続があり得る"
+      },
+      "total_form_loss": {
+        "description": "全身構造崩壊など原型喪失で因子層へ後退",
+        "result": [
+          "席番号は保持",
+          "ログは保持",
+          "物理層から消失"
+        ]
+      },
+      "normal_rebuild": {
+        "cooldown_period": "数日（個体差あり）",
+        "reconstruction_point": "IDOの近傍",
+        "cost": "軽度〜中度の精神負荷"
+      },
+      "forced_immediate_rebuild": {
+        "availability": "理論上可能",
+        "cost": [
+          "極大精神負荷",
+          "因子摩耗リスク",
+          "連続使用不可",
+          "IDO生命危機の可能性"
+        ]
+      },
+      "invariants": [
+        "席は原則消滅しない",
+        "消滅リスクはIDO側に偏る",
+        "席番号と構造ログは維持される"
+      ],
+      "non_applicable": [
+        "世界原理干渉による消滅",
+        "seat_total_erasure（完全消滅）"
+      ]
+    },
+    "seat_total_erasure": {
+      "definition": "席（外界機構）が構造ごと消滅する現象。通常の撃破・後退・再構成とは別扱い。",
+      "notes": [
+        "極めて稀な例外現象",
+        "Backfire（ログデリート）とは別事象",
+        "通常はIDO側が消滅する"
+      ],
+      "typical_triggers": [
+        "Overdress（過剰外界接続）",
+        "外界情報負荷の臨界",
+        "世界修正力との衝突"
+      ],
+      "restriction": [
+        "再現・技術化・量産不可"
+      ]
+    },
+    "manifestation_call_and_dismiss": {
+      "description": "顕現式は呼び出しにより物理層へ現れ、条件または意思により解除される。",
+      "call_condition": [
+        "IDOの意識的呼び出し",
+        "外部トリガ（状況・条件）"
+      ],
+      "dismiss_condition": [
+        "IDOの解除意思",
+        "条件解除",
+        "出力維持不能"
+      ],
+      "constraints": [
+        "常駐化は原則不可",
+        "自律維持は成立しない（例外は個別ログ）"
+      ]
+    },
+    "assimilation_triggers": {
+      "description": "同化式は席が宿主へ重なる／侵入することで成立する。発動条件・演出は席個体差が大きい。",
+      "generic_trigger_examples": [
+        "怒り・恐怖など極端な情動",
+        "席側からの侵入（捕食・包覆）",
+        "長時間の顕現維持による侵食",
+        "因子共鳴による自動同化"
+      ],
+      "progression_model": {
+        "stage_1": "接触（干渉開始）",
+        "stage_2": "侵入（境界曖昧化）",
+        "stage_3": "重なり（部分同化）",
+        "stage_4": "成立（戦闘形態確定）"
+      },
+      "risks": [
+        "精神侵食",
+        "制御喪失",
+        "因子逸脱",
+        "Backfire誘発リスク"
+      ],
+      "note": "特定トリガ（例：丸呑み・変形・強制侵食など）は SEAT_LOG または CHARACTER_LOG に個別記述する。"
+    },
+    "backfire_definition": {
+      "term": {
+        "japanese": "バックファイヤ",
+        "english": "Backfire"
+      },
+      "description": "外界の意思・情報が席を介してIDOへ逆流し、精神・存在・因果・記録に致命的な破壊を引き起こす現象。",
+      "triggers": [
+        "複合因子による不正接続",
+        "過剰な同化・侵食",
+        "外界情報の過負荷受信",
+        "世界修正力との衝突"
+      ],
+      "effects": [
+        "精神崩壊",
+        "存在崩壊",
+        "因果破断",
+        "ログ消滅（ログデリート）"
+      ],
+      "severity": {
+        "note": "Backfireは異常挙動の最悪域であり、暴走・異常発現の延長上に存在する。"
+      }
+    },
+    "seat_behavior_principle": {
+      "rule": "席は常に正常に翻訳している。誤訳は人間側の認識に起因する。"
+    },
+    "infection_model": {
+      "term_policy": "「感染」は医学的現象ではなく、席由来の因子による段階的眷属化現象のみを指す。",
+      "characteristics": [
+        "即時洗脳ではない",
+        "段階的侵食",
+        "環境依存（濃度・距離）"
+      ],
+      "interpretation_guard": [
+        "病原体として扱ってはならない",
+        "通常感染症モデルで解釈してはならない"
+      ]
+    },
+    "status": {
+      "contradiction_check": "NONE",
+      "safe_to_lock": true
+    }
+  }
+}

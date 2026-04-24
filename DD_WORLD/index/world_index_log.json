@@ -1,0 +1,170 @@
+{
+  "WORLD_INDEX_LOG": {
+    "version": "v1.0_FULL",
+    "document_role": "CONCEPT_INDEX",
+    "authority": {
+      "status": "canonical_index",
+      "scope": "world_terms_dictionary"
+    },
+    "system_note": [
+      "本ログは世界観用語の統一辞書である",
+      "各詳細仕様は world_log / world_rules / character_log に委任する",
+      "説明は簡潔にし、参照先を必ず持つ"
+    ],
+    "index": {
+      "tokai": {
+        "label": "撓界",
+        "type": "world_principle",
+        "description": "心・精神・意志の極限で発現する現象領域。世界の歪みとして観測される。",
+        "reference": "world_log.core_terms.tokai"
+      },
+      "doctrine": {
+        "label": "教義（ドグマ）",
+        "type": "core_concept",
+        "description": "撓界現象の発現形。個人の精神・意思に紐づく能力として現れる。",
+        "reference": "world_log.core_terms.doctrine"
+      },
+      "factor": {
+        "label": "外界因子",
+        "type": "core_system",
+        "description": "教義や席を構成する基本単位（1〜9）。相互関係により挙動が変化する。",
+        "reference": "world_log.core_terms.factor"
+      },
+      "seat": {
+        "label": "席（アウターマキナ）",
+        "type": "core_entity",
+        "description": "外界因子を基に成立する外界機構。IDOの力の実体化。",
+        "reference": "world_log.core_terms.seat"
+      },
+      "outer_world": {
+        "label": "外界",
+        "type": "world_principle",
+        "description": "応答しない高次観測領域。人間的意思は持たず、誤訳のみが発生する。",
+        "reference": "world_log.outer_world"
+      },
+      "trace": {
+        "label": "異界（Trace）",
+        "type": "world_state",
+        "description": "外界接触や戦闘により世界に残る履歴。希釈されるが消えない。",
+        "reference": "world_log.trace_world_model"
+      },
+      "world_correction": {
+        "label": "世界修正力",
+        "type": "system_principle",
+        "description": "世界の歪みを排除する反発機構。過剰な異常を局所的に破壊する。",
+        "reference": "world_log.world_correction_principle"
+      },
+      "log_delete": {
+        "label": "ログデリート",
+        "type": "system_event",
+        "description": "個体の存在情報が世界から削除される現象。",
+        "reference": "world_log.log_structure_model"
+      },
+      "backfire": {
+        "label": "バックファイヤ",
+        "type": "system_event",
+        "description": "外界情報が逆流し、精神・存在・因果を破壊する最悪域の異常現象。",
+        "reference": "world_rules.backfire_definition"
+      },
+      "overdress": {
+        "label": "Overdress（OD）",
+        "type": "system_event",
+        "description": "外界情報を過剰接続する運用。例外的に席の完全消滅を引き起こす。",
+        "reference": "world_rules.independent_seat_reconstruction.seat_total_erasure_exception"
+      },
+      "factor_layer": {
+        "label": "因子層",
+        "type": "layer",
+        "description": "席が物理実体を持たず存在する認識レイヤー。IDOにのみ観測される。",
+        "reference": "world_rules.seat_presence_layers.factor_layer"
+      },
+      "physical_layer": {
+        "label": "物理層",
+        "type": "layer",
+        "description": "席が実体として存在し、物理干渉可能な状態。",
+        "reference": "world_rules.seat_presence_layers.physical_layer"
+      },
+      "manifestation": {
+        "label": "顕現式",
+        "type": "seat_class",
+        "description": "呼び出し時のみ物理層に現れる運用形式。",
+        "reference": "world_rules.seat_operation_classes.manifestation"
+      },
+      "independent": {
+        "label": "独立式",
+        "type": "seat_class",
+        "description": "常時物理層に存在し、実体として固定される席。",
+        "reference": "world_rules.seat_operation_classes.independent"
+      },
+      "assimilation": {
+        "label": "同化式",
+        "type": "seat_class",
+        "description": "宿主と重なることで戦闘形態を形成する運用形式。",
+        "reference": "world_rules.seat_operation_classes.assimilation"
+      },
+      "concept_mechanism": {
+        "label": "概念機構",
+        "type": "mechanism_subtype",
+        "description": "概念そのものとして作用する席の構造分類。",
+        "reference": "character_logs / seat_logs"
+      },
+      "condition_mechanism": {
+        "label": "条件機構",
+        "type": "mechanism_subtype",
+        "description": "特定条件の成立により機能する席の構造分類。",
+        "reference": "character_logs / seat_logs"
+      },
+      "parasitic_mechanism": {
+        "label": "寄生機構",
+        "type": "mechanism_subtype",
+        "description": "対象に侵入・依存することで成立する席の構造分類。",
+        "reference": "character_logs / seat_logs"
+      },
+      "equipment_mechanism": {
+        "label": "装着機構",
+        "type": "mechanism_subtype",
+        "description": "装備・装着として宿主に適用される席の構造分類。",
+        "reference": "character_logs / seat_logs"
+      },
+      "unmanaged_seat": {
+        "label": "未管理席",
+        "type": "system_state",
+        "description": "管理者不在により挙動が予測不能となった席状態。",
+        "reference": "world_rules.unmanaged_core_principles"
+      },
+      "seat_total_erasure": {
+        "label": "席の完全消滅",
+        "type": "system_event",
+        "description": "席そのものが構造ごと消滅する極めて稀な例外現象。",
+        "reference": "world_rules.seat_total_erasure"
+      },
+      "simultaneous_seat_use": {
+        "label": "同時席使用",
+        "type": "system_rule",
+        "description": "複数席の同時使用。原則不可能であり例外は崩壊前提。",
+        "reference": "world_rules.simultaneous_seat_use"
+      },
+      "infection": {
+        "label": "感染（眷属化）",
+        "type": "system_state",
+        "description": "席由来因子による段階的侵食現象。医学的感染とは異なる。",
+        "reference": "world_rules.infection_model"
+      },
+      "temporal_exception": {
+        "label": "時間特異存在",
+        "type": "entity_state",
+        "description": "過去未来に確定せず、現在のみ成立する外界侵食個体。",
+        "reference": "world_log.temporal_exception_entities"
+      }
+    },
+    "status": {
+      "contradiction_check": {
+        "world_log": "NONE",
+        "world_rules": "NONE",
+        "location_index": "NONE"
+      },
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

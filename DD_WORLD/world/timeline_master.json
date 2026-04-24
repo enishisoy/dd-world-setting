@@ -1,0 +1,259 @@
+{
+  "TIMELINE_MASTER": {
+    "version": "v1.0_FULL",
+    "document_role": "FULL_CANONICAL",
+    "authority": {
+      "status": "canonical",
+      "scope": "series_timeline_control"
+    },
+    "purpose": "DDシリーズ全体の章順・年代・期間・主要因果順序を固定する。各章の詳細な事件進行は CHAPTER_STORY_CODE に委任する。",
+    "system_note": [
+      "本ログはシリーズ全体の時間軸を管理する。",
+      "各章内の詳細PART構造・戦闘詳細・人物配置は story/ 配下で管理する。",
+      "未確定項目は null または SEMI_LOCKED として保持する。"
+    ],
+    "series_timeline": {
+      "chapter_1": {
+        "chapter_id": "CH1",
+        "title": "Dance in the Dogma",
+        "year": 2010,
+        "timeline_structure": {
+          "prologue": "2010年4月",
+          "main_start": "2010年3月",
+          "main_end": "2010年4月",
+          "note": "プロローグと本編の時間軸がずれている。観測順と実時間が逆転している。"
+        },
+        "duration": "約1ヶ月",
+        "fixed_events": [
+          "八雲家みかんの苗木",
+          "田中源十郎事件",
+          "阿野翔太事件",
+          "智美死亡",
+          "恵美失語症"
+        ],
+        "lock_state": "LOCKED"
+      },
+      "chapter_2": {
+        "chapter_id": "CH2",
+        "title": "Dance in the Damned",
+        "year": 2015,
+        "timeline_structure": {
+          "main_start": "2015年11月",
+          "main_end": "2015年11月",
+          "relation_to_previous": "第一章から5年後",
+          "note": [
+            "全体は数週間スパン",
+            "戦闘本番は1日の数時間に集中"
+          ]
+        },
+        "duration": {
+          "total": "数週間",
+          "core_event": "数時間"
+        },
+        "fixed_events": [
+          "東京戦闘発生",
+          "恵美移送",
+          "奪取",
+          "三勢力衝突",
+          "第二章ログ内イベント全て"
+        ],
+        "structural_meaning": [
+          "日常から戦争への転換点",
+          "誤認戦場の成立",
+          "国家とイドの正面衝突"
+        ],
+        "lock_state": "LOCKED"
+      },
+      "chapter_3": {
+        "chapter_id": "CH3",
+        "title": "Dance in the Dark",
+        "year": 2016,
+        "timeline_structure": {
+          "main_start": "2016年4月頃",
+          "main_end": null,
+          "relation_to_previous": [
+            "第二章から数ヶ月後",
+            "第二章戦争後の余波期間"
+          ]
+        },
+        "duration": "1ヶ月以上",
+        "thematic_classification": "回復を装った崩壊進行章",
+        "core_flow": [
+          "日常の再構築",
+          "局所的歪みの発生",
+          "意味・救済への接近",
+          "意味の否定",
+          "殺す側から終わらせる側への転換",
+          "逃避世界の提示",
+          "自己選択による現実回帰",
+          "救済の代償",
+          "理解した上での終結",
+          "生存のみが残る"
+        ],
+        "fixed_events": [
+          "恵美による校内暴力事件",
+          "セシリーとローランドの怪事件",
+          "マルコ逮捕と自死",
+          "京極蓮太郎との対峙",
+          "ロッテ消滅",
+          "朝霧将吾との忘却事件",
+          "東堂千歳死亡",
+          "坂木秀徳介錯",
+          "ネビュラとの合流",
+          "岡野蔵六による援助"
+        ],
+        "structural_meaning": [
+          "第二章の結果の継承",
+          "正しさの否定",
+          "救済の崩壊",
+          "選択のみが残る世界への移行"
+        ],
+        "lock_state": "SEMI_LOCKED"
+      },
+      "chapter_4": {
+        "chapter_id": "CH4",
+        "title": "Dance in the Diva",
+        "year": 2020,
+        "season": "みかんが収穫できる時期",
+        "timeline_structure": {
+          "relation_to_previous": [
+            "第三章から約4年後",
+            "恵美は潜伏状態から開始"
+          ]
+        },
+        "duration": "短期（数日）",
+        "main_characters": [
+          "八雲恵美",
+          "結城沙耶",
+          "ミロク",
+          "クナド",
+          "岡野蔵六",
+          "ネビュラ",
+          "八雲智美"
+        ],
+        "core_flow": [
+          "沙耶脱走",
+          "恵美と沙耶の合流",
+          "未来視の共有化",
+          "ミロクによる死の宣告",
+          "未来未確定同士の遭遇",
+          "未来の再定義",
+          "生存状態の変質",
+          "ネビュラの最終支援と消滅",
+          "クナドとの対峙",
+          "罪の破壊",
+          "クナド消滅",
+          "智美の再出現"
+        ],
+        "fixed_events": [
+          "沙耶脱走",
+          "恵美と沙耶の合流",
+          "ミロクとの遭遇と宣告",
+          "未来未確定同士の接触",
+          "ネビュラ消滅",
+          "クナド消滅",
+          "智美再出現"
+        ],
+        "structural_meaning": [
+          "選択が裁かれる段階への移行",
+          "未来は救いではないと確定する",
+          "死は回避対象ではなく隣接状態となる",
+          "クナドの終焉",
+          "第五章への接続"
+        ],
+        "thematic_core": [
+          "神罰",
+          "選択の責任",
+          "未来の不確定性",
+          "罪の本質的断罪"
+        ],
+        "lock_state": "LOCKED"
+      },
+      "chapter_5": {
+        "chapter_id": "CH5",
+        "title": "Dance in the Doom",
+        "year": 2020,
+        "timeline_structure": {
+          "relation_to_previous": "第四章直後、数日後"
+        },
+        "duration": "短期（数日）",
+        "main_characters": [
+          "八雲恵美",
+          "結城沙耶",
+          "八雲智美",
+          "レティ"
+        ],
+        "core_flow": [
+          "智美の再出現",
+          "創造による恵美の修復",
+          "偽りの姉妹生活",
+          "智美の死と再複製",
+          "創造のドグマの本質開示",
+          "過去への回帰という誘惑",
+          "恵美の拒絶と決断",
+          "カルマ起動",
+          "二席同時運用",
+          "レティの自己犠牲",
+          "創造のアルマ破壊",
+          "全アウターマキナ破壊",
+          "カルマ破壊",
+          "生存者の確定",
+          "日常への帰還"
+        ],
+        "fixed_events": [
+          "智美復元",
+          "智美の複製性判明",
+          "創造のドグマの危険性確定",
+          "カルマ起動",
+          "破壊のドグマ発現",
+          "レティ消滅",
+          "アルマ破壊",
+          "全アウターマキナ破壊",
+          "恵美と沙耶の生存確定"
+        ],
+        "ending_definition": {
+          "world_state": "不変",
+          "system_state": "終焉",
+          "survivors": [
+            "八雲恵美",
+            "結城沙耶"
+          ]
+        },
+        "thematic_core": [
+          "不老不死",
+          "記憶と存在",
+          "終わらせる責任",
+          "生と死の受容"
+        ],
+        "final_statement": [
+          "誰も救われなかった",
+          "それでも世界は続く",
+          "足跡だけが残る"
+        ],
+        "lock_state": "LOCKED"
+      }
+    },
+    "series_structure": {
+      "chapter_1": "異常の発見",
+      "chapter_2": "戦争とエゴイズム",
+      "chapter_3": "正しさの崩壊",
+      "chapter_4": "選択の裁き",
+      "chapter_5": "死の受容と終端"
+    },
+    "global_time_rules": {
+      "prologue_offset_allowed": true,
+      "observation_order_may_differ_from_actual_time": true,
+      "chapter_detail_managed_by_story_files": true
+    },
+    "status": {
+      "contradiction_check": {
+        "world_log": "NONE",
+        "world_rules": "NONE",
+        "story_code": "NONE",
+        "character_logs": "NONE"
+      },
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

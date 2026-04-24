@@ -1,0 +1,118 @@
+{
+  "GOVERNMENT_ACCESS_HIERARCHY_LOG": {
+    "version": "v1.0_FULL",
+    "document_role": "FULL_CANONICAL",
+    "authority": {
+      "status": "canonical",
+      "scope": "government_access_structure"
+    },
+    "system_note": "本ログは政府施設アクセス階層の構造定義であり、個別キャラクターの所属レベルは固定しない。各キャラクターのアクセス権限・章ごとの変化は CHARACTER_LOG または CHAPTER_STORY_CODE にて管理される。",
+    "levels": {
+      "LEVEL_5_FULL_ACCESS": {
+        "holders": [
+          "黒田隼人",
+          "日下部麗子",
+          "結城教授"
+        ],
+        "description": [
+          "全施設の接続を理解",
+          "皇居地下本丸の存在を把握",
+          "ダミー構造を認識",
+          "情報統制側"
+        ],
+        "authority": [
+          "全区画アクセス承認",
+          "施設情報の秘匿・改竄",
+          "人員配置変更",
+          "移送ルート変更"
+        ]
+      },
+      "LEVEL_4_FALSE_CORE": {
+        "holders": [
+          "奥多摩収監施設 上位管理者",
+          "ドグマ対策室 上位メンバー"
+        ],
+        "description": [
+          "源十郎・阿野の存在を知る",
+          "奥多摩施設を本拠地と誤認",
+          "他施設との接続は知るが構造理解は不完全"
+        ],
+        "authority": [
+          "奥多摩施設の管理",
+          "官庁街地下施設への限定アクセス",
+          "収監対象の移送指示（限定）"
+        ],
+        "restriction": [
+          "皇居地下本丸は存在自体を知らない"
+        ]
+      },
+      "LEVEL_3_OPERATION": {
+        "holders": [
+          "監視員",
+          "武装警備",
+          "一部研究員"
+        ],
+        "description": [
+          "収監対象のみ認識",
+          "任務単位の情報のみ保持",
+          "全体構造は知らない"
+        ],
+        "authority": [
+          "担当区画のみ入室可能",
+          "対象監視",
+          "封印・警備運用"
+        ],
+        "restriction": [
+          "他区画情報へのアクセス不可",
+          "施設全体図の閲覧不可"
+        ]
+      },
+      "LEVEL_2_ANALYSIS": {
+        "holders": [
+          "官庁街地下の研究員"
+        ],
+        "description": [
+          "サンプル・データのみ扱う",
+          "実物も現場も知らない"
+        ],
+        "authority": [
+          "分析ログ閲覧",
+          "限定サンプル処理"
+        ],
+        "restriction": [
+          "収監対象との接触不可",
+          "奥多摩施設の詳細不知",
+          "皇居地下本丸の存在不知"
+        ]
+      },
+      "LEVEL_1_SURFACE": {
+        "holders": [
+          "一般警備",
+          "建設関係者",
+          "非イド警察"
+        ],
+        "description": [
+          "施設の表の役割のみ認識"
+        ],
+        "authority": [
+          "表向き区画の出入り",
+          "インフラ・保守・地上警備"
+        ],
+        "restriction": [
+          "地下中枢区画へのアクセス不可",
+          "イド関連情報への接触不可"
+        ]
+      }
+    },
+    "status": {
+      "contradiction_check": {
+        "world_map": "NONE",
+        "world_log": "NONE",
+        "world_rules": "NONE",
+        "story_code": "NONE"
+      },
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

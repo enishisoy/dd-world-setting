@@ -1,0 +1,109 @@
+{
+  "PATCH_SET_LATEST": {
+    "version": "2026-01_LATEST",
+    "document_role": "PATCH_REGISTRY",
+    "authority": {
+      "status": "canonical",
+      "scope": "patch_management"
+    },
+
+    "system_note": [
+      "本ログは現在有効な全パッチの一覧を管理する",
+      "各パッチは対応ログへ影響を与える",
+      "無効化されたパッチも履歴として保持する"
+    ],
+
+    "patches": {
+
+      "PATCH_WORLD_INDEX_TERM_STYLE_AND_RAMPAGE_TAXONOMY_2026-01_F": {
+        "status": "active",
+        "scope": "index_only",
+        "target": [
+          "WORLD_INDEX_LOG"
+        ],
+        "effect": "用語表記統一および分類整理"
+      },
+
+      "PATCH_UNMANAGED_SEAT_AND_INFECTION_MODEL_2026-01_B": {
+        "status": "active",
+        "scope": "world_rules",
+        "target": [
+          "WORLD_RULES"
+        ],
+        "effect": "未管理席および感染（眷属化）モデルの定義追加"
+      },
+
+      "PATCH_KUNAD_EXCEPTION_INTEGRATION_2026-01_D": {
+        "status": "active",
+        "scope": "world_log",
+        "target": [
+          "WORLD_LOG"
+        ],
+        "effect": "クナド第四章例外の統合および再配置"
+      },
+
+      "PATCH_RUNTIME_OVERRIDE_TERMINATION_2026-01_E": {
+        "status": "completed",
+        "scope": "system",
+        "target": [
+          "ALL_LOGS"
+        ],
+        "effect": "一時的ランタイム上書きの終了"
+      },
+
+      "PATCH_INTAKE_ACCEPTANCE_GATE_2026-01_C": {
+        "status": "active",
+        "scope": "system",
+        "target": [
+          "ALL_INPUT"
+        ],
+        "effect": "情報受領・解釈制御ゲート"
+      },
+
+      "PATCH_FACTOR_COMPATIBILITY_POST_LOCK_GATE_2026-01_A": {
+        "status": "deprecated",
+        "scope": "index",
+        "target": [
+          "FACTOR_COMPATIBILITY_INDEX"
+        ],
+        "effect": "キャラクターログロック後のみ参照可能とする制限",
+        "deprecation_reason": "キャラクター構築フェーズ終了により不要化"
+      },
+
+      "PATCH_FACTOR_COMPATIBILITY_ACCESS_FREE_2026-01_G": {
+        "status": "active",
+        "scope": "index",
+        "target": [
+          "FACTOR_COMPATIBILITY_INDEX"
+        ],
+        "effect": "因子相性インデックスの参照制限を解除し、常時参照可能とする",
+        "overrides": [
+          "PATCH_FACTOR_COMPATIBILITY_POST_LOCK_GATE_2026-01_A"
+        ],
+        "note": [
+          "キャラクター構築フェーズ終了後の編集・整合確認フェーズ用",
+          "能力定義への直接使用は禁止（WORLD_RULES優先）"
+        ]
+      }
+    },
+
+    "global_rules": {
+      "patch_priority": [
+        "latest_override",
+        "explicit_override",
+        "canonical_world_rules"
+      ],
+      "conflict_resolution": "新規パッチが旧パッチを明示的にoverrideする場合、旧パッチはdeprecated扱いとする"
+    },
+
+    "status": {
+      "contradiction_check": {
+        "world_log": "NONE",
+        "world_rules": "NONE",
+        "index": "NONE"
+      },
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

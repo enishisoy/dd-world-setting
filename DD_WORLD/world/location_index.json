@@ -1,0 +1,160 @@
+{
+  "LOCATION_INDEX": {
+    "version": "v1.0_FULL",
+    "document_role": "REFERENCE_INDEX",
+    "authority": {
+      "status": "canonical_index",
+      "scope": "location_reference"
+    },
+    "system_note": "本ログは主要ロケーションの検索・参照用インデックスであり、詳細な構造定義は WORLD_MAP_LOG または各章ストーリーコードに委任する。",
+    "locations": {
+      "kasukabe_area": {
+        "label": "春日部",
+        "type": "生活圏",
+        "role_short": "日常が破壊される起点",
+        "reference": "world_map_tokyo.kasukabe"
+      },
+      "mitsuru_office": {
+        "label": "薬師寺探偵事務所",
+        "type": "拠点",
+        "role_short": "美鶴の拠点であり、恵美保護の発端",
+        "reference": "world_map_tokyo.kasukabe.surface_sites.mitsuru_office"
+      },
+      "local_police_station": {
+        "label": "地元警察署",
+        "type": "公共施設",
+        "role_short": "恵美の一時保護と政府引き渡し遅延の発生点",
+        "reference": "world_map_tokyo.kasukabe.surface_sites.local_police"
+      },
+      "ueno_park": {
+        "label": "上野公園",
+        "type": "公共空間",
+        "role_short": "美鶴とクナドの初期交差点",
+        "reference": "world_map_tokyo.ueno.sites.ueno_park"
+      },
+      "ouji_church": {
+        "label": "王子の教会",
+        "type": "偽装拠点",
+        "role_short": "クナド勢の地上偽装拠点",
+        "reference": "world_map_tokyo.ouji.surface_sites.church"
+      },
+      "ouji_bar": {
+        "label": "王子のバー",
+        "type": "接触地点",
+        "role_short": "クナドと美鶴の対話地点",
+        "reference": "world_map_tokyo.ouji.surface_sites.bar"
+      },
+      "kunad_underground_base": {
+        "label": "クナド勢地下本拠地",
+        "type": "地下拠点",
+        "role_short": "クナド勢の会合・因子観測・都市介入準備拠点",
+        "reference": "world_map_tokyo.ouji.underground_sites.kunad_base"
+      },
+      "okutama_facility": {
+        "label": "奥多摩特殊収監施設",
+        "type": "偽装施設",
+        "role_short": "政府が見せる偽の本丸",
+        "reference": "world_map_tokyo.oku_tama"
+      },
+      "okutama_prison_layer": {
+        "label": "奥多摩特殊収監区画",
+        "type": "収監区画",
+        "role_short": "凶悪犯・危険対象の外向け収監機能",
+        "reference": "world_map_tokyo.oku_tama.underground_sites.prison_layer"
+      },
+      "okutama_ido_layer": {
+        "label": "奥多摩イド収監区画",
+        "type": "イド収監区画",
+        "role_short": "危険イド隔離と誤認本拠地の中核",
+        "reference": "world_map_tokyo.oku_tama.underground_sites.ido_layer"
+      },
+      "genjuro_cell": {
+        "label": "田中源十郎封印区画",
+        "type": "封印区画",
+        "role_short": "田中源十郎を収監する最深部区画",
+        "reference": "world_map_tokyo.oku_tama.underground_sites.genjuro_cell"
+      },
+      "ano_cell": {
+        "label": "阿野翔太隔離区画",
+        "type": "隔離区画",
+        "role_short": "阿野翔太を収監する深層隔離区画",
+        "reference": "world_map_tokyo.oku_tama.underground_sites.ano_cell"
+      },
+      "kasumigaseki_area": {
+        "label": "霞が関",
+        "type": "国家戦場",
+        "role_short": "第二章の誤認戦場",
+        "reference": "world_map_tokyo.kasumigaseki"
+      },
+      "dogma_counter_room": {
+        "label": "ドグマ対策室",
+        "type": "政府実務中枢",
+        "role_short": "戦闘・収容運用の現場中枢",
+        "reference": "world_map_tokyo.kasumigaseki.underground_sites.dogma_counter_room"
+      },
+      "public_research_layer": {
+        "label": "官庁街地下 表研究施設",
+        "type": "研究施設",
+        "role_short": "サンプル分析とデータ処理の研究層",
+        "reference": "world_map_tokyo.kasumigaseki.underground_sites.public_research_layer"
+      },
+      "ido_related_facility": {
+        "label": "イド関連地下施設",
+        "type": "地下運用施設",
+        "role_short": "一時運用と移送受け入れを担う誤認中枢",
+        "reference": "world_map_tokyo.kasumigaseki.underground_sites.ido_related_facility"
+      },
+      "police_headquarters": {
+        "label": "警視庁本部",
+        "type": "警察中枢",
+        "role_short": "千歳が核心に近いのに届かない場所",
+        "reference": "world_map_tokyo.police_headquarters"
+      },
+      "prime_minister_office": {
+        "label": "首相官邸",
+        "type": "政治中枢",
+        "role_short": "黒田隼人の意思決定拠点",
+        "reference": "world_map_tokyo.prime_minister_office"
+      },
+      "imperial_palace": {
+        "label": "皇居",
+        "type": "国家中枢",
+        "role_short": "表向きの皇居／宮内庁管理領域",
+        "reference": "world_map_tokyo.imperial_palace"
+      },
+      "imperial_core": {
+        "label": "皇居地下本丸",
+        "type": "本研究施設",
+        "role_short": "外界研究所の本体であり国家の真実",
+        "reference": "world_map_tokyo.imperial_palace.underground_sites.imperial_core"
+      },
+      "higashi_jujo_area": {
+        "label": "東十条",
+        "type": "生活圏",
+        "role_short": "恵美の居住地として扱われる都市生活圏",
+        "reference": "character_log.yakumo_emi.residence"
+      },
+      "okano_hideout": {
+        "label": "岡野蔵六の保護拠点",
+        "type": "潜伏拠点",
+        "role_short": "第三章以降、恵美が身を潜める援助拠点",
+        "reference": "chapter_story.chapter_3 / chapter_4"
+      },
+      "yakumo_home": {
+        "label": "八雲家",
+        "type": "家族拠点",
+        "role_short": "みかんの木と記憶が残る終章の帰還地点",
+        "reference": "timeline_master.chapter_1 / chapter_5"
+      }
+    },
+    "status": {
+      "contradiction_check": {
+        "world_map": "NONE",
+        "timeline_master": "NONE",
+        "character_logs": "NONE"
+      },
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "world_bundle": {
+    "meta": {
+      "bundle_id": "WORLD_BUNDLE_2026-01_LOCKED_v1.0.2_FULL",
+      "document_role": "FULL_CANONICAL",
+      "status": "canonical",
+      "scope": "world_integrated_bundle",
+      "lock_state": "LOCKED",
+      "rule": "本バンドルは WORLD_LOG / WORLD_RULES / DD_STORY_CODE / WORLD_INDEX_LOG の最新版を統合した世界定義である。DD_STORY_CODE（章順・終端）を改変せず、世界の因果・意味・挙動・運用原則を最終固定する。"
+    },
+    "includes": [
+      "WORLD_LOG v1.4.1_FULL",
+      "WORLD_RULES v1.4_FULL",
+      "DD_STORY_CODE v1.1",
+      "WORLD_INDEX_LOG v1.1_FULL",
+      "PATCH_UNMANAGED_OUTER_MACHINA_INFECTION_MODEL_2026-01",
+      "PATCH_WORLD_BUNDLE_TERM_DEFINITION_UPDATE_2026-01-13_A"
+    ],
+    "core_concepts": {
+      "ido": "異度（IDO）",
+      "tokai": "撓界（とうかい）",
+      "doctrine": {
+        "in_text": "教義",
+        "ruby": "ドグマ",
+        "formal_name": "撓界現象",
+        "note_short": "人間側で解釈される体系（思想・病理・信仰等）としての呼称。"
+      },
+      "factor": {
+        "in_text": "外界因子",
+        "note_short": "数秘起点の根源的方向性（1〜9）。能力名ではない。"
+      },
+      "seat": {
+        "in_text": "席",
+        "ruby": "アウターマキナ",
+        "formal_name": "外界機構",
+        "note_short": "S-nで管理される外界の座／観測装置。"
+      }
+    },
+    "world_premise": "人間の心・精神・意志が極限に達したとき、撓界現象（教義）が発現する世界。教義は奇跡ではなく、人間存在の歪みが世界へ干渉した結果である。",
+    "ido_definition": {
+      "definition": "教義（ドグマ）を宿し、心と意志の極限によって現実を歪める特異な人間。",
+      "note_short": "教義（ドグマ）は撓界現象として現れ、外界因子（1〜9）の方向性で翻訳・解釈される。",
+      "role": "世界を救わない。選択の結果だけを刻む存在。"
+    },
+    "outer_world": {
+      "definition": "現実世界の背後に存在する高次観測領域。",
+      "access_rule": "原則として人間は接触不能。接触は精神崩壊を引き起こす。",
+      "exception_trio": [
+        "クナド",
+        "ミロク",
+        "八雲智美（八雲さとみ）"
+      ],
+      "details_reference": "WORLD_LOG.outer_world"
+    },
+    "death_principle": {
+      "definition": "死は欠損ではなく、選択の終端である。",
+      "invalid_action": "死を無効化し、無限に復元する行為は世界構造への重大な逸脱として扱われる。"
+    },
+    "seat_definition": {
+      "origin": "外界の席／観測装置",
+      "function": [
+        "教義発現補助",
+        "外界意思・エネルギー媒介"
+      ],
+      "properties": [
+        "コミュニケーション可能な個体が存在",
+        "人格的振る舞いを示す場合がある",
+        "食事・恋愛など人間的行動を取る例あり"
+      ],
+      "rename_note": {
+        "in_text_default": "席",
+        "ruby": "アウターマキナ",
+        "formal_name": "外界機構",
+        "rule": "以後、本文上の呼称は原則『席』を用い、必要箇所で『席（アウターマキナ）』と補助する。"
+      },
+      "absolute_limits": [
+        "自己複製しない",
+        "指数増殖しない",
+        "新たな席を生成しない"
+      ]
+    },
+    "management_states": {
+      "managed": {
+        "definition": "管理者または明確な世界秩序の下にあり、観測・制御・停止条件が定義されている状態。"
+      },
+      "unmanaged": {
+        "definition": "管理者の消滅・離脱・機能停止により、世界ルールから逸脱した状態。"
+      },
+      "details_reference": "WORLD_RULES.seat_management_states"
+    },
+    "factor_set_reconfiguration": {
+      "definition": "宿主が本来対応しない席に強制接続した場合、因子組のみが再編・破壊・誤接続される。",
+      "invariants": [
+        "席番号は固定",
+        "因子組のみ変質",
+        "宿主因子を優先参照"
+      ],
+      "canonical_case": {
+        "seat": "S-18 レティ",
+        "transitions": [
+          "6+5+7（煉獄）",
+          "9+5+4（断罪）"
+        ]
+      }
+    },
+    "infection_model": {
+      "term": "感染",
+      "canonical_meaning": "医学的感染ではなく、席由来の植物因子による段階的眷属化現象。",
+      "clarification": [
+        "病原体ではない",
+        "即時洗脳ではない"
+      ],
+      "details_reference": [
+        "WORLD_BUNDLE.infection_model",
+        "WORLD_RULES.infection_model"
+      ]
+    },
+    "relation_to_world_end": {
+      "rule": "未管理席の存在は、世界終焉の必要条件でも十分条件でもない。",
+      "chapter_5_alignment": "第五章の全席破壊は、危険回避ではなく『死の不可逆性と選択の尊厳』を守るための選択。"
+    },
+    "special_rules": {
+      "kunad_exception_status": {
+        "summary": "外界侵食済み存在は世界拒絶の適用が遅延する場合がある。",
+        "details_reference": "WORLD_LOG.kunad_exception_status"
+      },
+      "simultaneous_seat_rule_addendum": {
+        "summary": "同時席使用は原則不可能だが、極度の外界侵食存在のみ短時間の例外があり得る。",
+        "details_reference": [
+          "WORLD_LOG.simultaneous_seat_rule",
+          "WORLD_RULES.simultaneous_seat_use"
+        ]
+      },
+      "undefined_doctrine_usage_policy": {
+        "summary": "クナド第四章の触手状攻撃等は特定教義として定義しない。",
+        "details_reference": "WORLD_LOG.undefined_doctrine_usage_policy"
+      },
+      "soul_core_destruction_rule": {
+        "summary": "クナドの消滅条件は肉体破壊ではなく魂核の知覚と破壊である。",
+        "details_reference": "WORLD_LOG.soul_core_destruction_rule"
+      },
+      "failed_body_takeover_case": {
+        "summary": "クナドは沙耶の肉体および未来の教義の奪取に失敗している。",
+        "details_reference": "WORLD_LOG.failed_body_takeover_case"
+      },
+      "overdress": {
+        "summary": "Overdress は席の完全消滅を引き起こし得る奇跡級例外である。",
+        "details_reference": [
+          "WORLD_LOG.independent_seat_reconstruction.seat_total_erasure_exception.overdress",
+          "WORLD_INDEX_LOG.notes.term_policy.term_policy_addendum.overdress_policy"
+        ]
+      },
+      "backfire": {
+        "summary": "Backfire は外界情報の逆流によって精神・存在・因果・記録に破壊を起こす現象である。",
+        "details_reference": [
+          "WORLD_RULES.backfire_definition",
+          "WORLD_INDEX_LOG.notes.term_policy.term_definition.backfire"
+        ]
+      }
+    },
+    "invalid_interpretations": [
+      "未管理＝必然的世界破滅",
+      "席が増殖する",
+      "感染＝病原体",
+      "眷属化＝即時洗脳",
+      "焼却＝裁き・正義",
+      "第五章は事故的破壊",
+      "クナド第四章の複数教義併用が確定している",
+      "触手攻撃＝固有教義能力",
+      "同時席使用が再現可能戦術",
+      "クナドが完全例外（修正力無効）"
+    ],
+    "status": {
+      "integrated_with": [
+        "WORLD_LOG v1.4.1_FULL",
+        "WORLD_RULES v1.4_FULL",
+        "DD_STORY_CODE v1.1",
+        "WORLD_INDEX_LOG v1.1_FULL"
+      ],
+      "contradiction_check": {
+        "world": "NONE",
+        "story": "NONE",
+        "index": "NONE"
+      },
+      "safe_to_lock": true
+    }
+  }
+}

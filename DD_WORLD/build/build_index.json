@@ -1,0 +1,198 @@
+{
+  "BUILD_INDEX": {
+    "version": "v1.0_FULL",
+    "document_role": "PROJECT_FILE_MANIFEST",
+    "authority": {
+      "status": "canonical",
+      "scope": "repository_structure_control"
+    },
+    "system_note": [
+      "本ログはDDシリーズ設定管理リポジトリのファイル目録である",
+      "各ファイルの役割・状態・推奨読込順を管理する",
+      "設定本文そのものは各個別ファイルに委任する"
+    ],
+    "read_order": [
+      "system/log_priority_rules.json",
+      "system/patch_set_latest.json",
+      "world/world_log.json",
+      "world/world_rules.json",
+      "world/timeline_master.json",
+      "world/world_map_tokyo.json",
+      "world/government_access_hierarchy.json",
+      "world/location_index.json",
+      "index/world_index_log.json",
+      "index/factor_compatibility_index.json",
+      "character/",
+      "story/"
+    ],
+    "files": {
+      "system/log_priority_rules.json": {
+        "category": "system",
+        "role": "ログ優先順位と参照ルールを定義する",
+        "status": "PENDING",
+        "priority": 1,
+        "depends_on": []
+      },
+      "system/patch_set_latest.json": {
+        "category": "system",
+        "role": "現在有効なパッチ一覧と無効化済みパッチを管理する",
+        "status": "LOCKED",
+        "priority": 2,
+        "depends_on": [
+          "system/log_priority_rules.json"
+        ]
+      },
+      "world/world_bundle.json": {
+        "category": "world",
+        "role": "世界設定全体の統合参照ファイル。必要に応じて生成する",
+        "status": "OPTIONAL",
+        "priority": 3,
+        "depends_on": [
+          "world/world_log.json",
+          "world/world_rules.json",
+          "world/timeline_master.json",
+          "world/world_map_tokyo.json",
+          "world/government_access_hierarchy.json",
+          "world/location_index.json",
+          "index/world_index_log.json",
+          "index/factor_compatibility_index.json"
+        ]
+      },
+      "world/world_log.json": {
+        "category": "world",
+        "role": "世界原理・外界・異界・死・修正力などの根本設定を定義する",
+        "status": "LOCKED",
+        "priority": 4,
+        "depends_on": [
+          "system/patch_set_latest.json"
+        ]
+      },
+      "world/world_rules.json": {
+        "category": "world",
+        "role": "席・因子・運用区分・バックファイヤ・感染などの運用ルールを定義する",
+        "status": "LOCKED",
+        "priority": 5,
+        "depends_on": [
+          "world/world_log.json"
+        ]
+      },
+      "world/world_map_tokyo.json": {
+        "category": "world",
+        "role": "首都圏の物理配置・地下構造・戦場・本丸構造を定義する",
+        "status": "LOCKED",
+        "priority": 6,
+        "depends_on": [
+          "world/world_log.json",
+          "world/world_rules.json"
+        ]
+      },
+      "world/government_access_hierarchy.json": {
+        "category": "world",
+        "role": "政府施設への認識階層・アクセス権限・誤認構造を定義する",
+        "status": "LOCKED",
+        "priority": 7,
+        "depends_on": [
+          "world/world_map_tokyo.json"
+        ]
+      },
+      "world/timeline_master.json": {
+        "category": "world",
+        "role": "全章の年代・期間・主要因果順序を管理する",
+        "status": "LOCKED",
+        "priority": 8,
+        "depends_on": [
+          "world/world_log.json",
+          "world/world_rules.json"
+        ]
+      },
+      "world/location_index.json": {
+        "category": "world",
+        "role": "主要ロケーションの検索用索引",
+        "status": "LOCKED",
+        "priority": 9,
+        "depends_on": [
+          "world/world_map_tokyo.json",
+          "world/timeline_master.json"
+        ]
+      },
+      "index/world_index_log.json": {
+        "category": "index",
+        "role": "世界観用語・概念・分類の辞書索引",
+        "status": "LOCKED",
+        "priority": 10,
+        "depends_on": [
+          "world/world_log.json",
+          "world/world_rules.json"
+        ]
+      },
+      "index/factor_compatibility_index.json": {
+        "category": "index",
+        "role": "外界因子1〜9の相互作用傾向を定義する参照索引",
+        "status": "PENDING_REVIEW",
+        "priority": 11,
+        "depends_on": [
+          "world/world_rules.json",
+          "system/patch_set_latest.json"
+        ]
+      },
+      "character/": {
+        "category": "character",
+        "role": "各キャラクター・席・ドグマの個別ログを管理する",
+        "status": "PENDING",
+        "priority": 12,
+        "depends_on": [
+          "world/world_log.json",
+          "world/world_rules.json",
+          "index/world_index_log.json",
+          "index/factor_compatibility_index.json"
+        ]
+      },
+      "story/": {
+        "category": "story",
+        "role": "各章ストーリーコード・PART構造・事件進行を管理する",
+        "status": "PENDING",
+        "priority": 13,
+        "depends_on": [
+          "world/timeline_master.json",
+          "world/world_map_tokyo.json",
+          "world/location_index.json",
+          "character/"
+        ]
+      }
+    },
+    "completion_summary": {
+      "completed": [
+        "world/world_log.json",
+        "world/world_rules.json",
+        "world/world_map_tokyo.json",
+        "world/government_access_hierarchy.json",
+        "world/timeline_master.json",
+        "world/location_index.json",
+        "index/world_index_log.json",
+        "system/patch_set_latest.json"
+      ],
+      "pending_review": [
+        "index/factor_compatibility_index.json"
+      ],
+      "pending": [
+        "system/log_priority_rules.json",
+        "character/",
+        "story/"
+      ],
+      "optional": [
+        "world/world_bundle.json"
+      ]
+    },
+    "validation_rules": {
+      "no_story_detail_in_world_files": true,
+      "no_character_state_in_world_map": true,
+      "no_power_definition_from_factor_index_only": true,
+      "timeline_master_controls_series_order": true,
+      "patch_set_controls_active_override": true
+    },
+    "status": {
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

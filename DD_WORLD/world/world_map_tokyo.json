@@ -1,0 +1,378 @@
+{
+  "WORLD_MAP_LOG": {
+    "region": "首都圏",
+    "authority_note": "本ログは第二章時点の物理配置・機能配置・秘匿構造を定義する。アクセス権限そのものは ACCESS_HIERARCHY_LOG を参照する。本ログでは「どこに何があるか」「表向き何に見えるか」を固定する。",
+    "macro_structure": {
+      "kasukabe": {
+        "classification": "外縁生活圏",
+        "role": [
+          "探偵事務所を含む生活拠点圏",
+          "保護対象の監督生活圏"
+        ],
+        "story_use": [
+          "日常パート",
+          "恵美保護",
+          "政府による回収起点"
+        ]
+      },
+      "tokyo_north_axis": {
+        "classification": "北部接続圏",
+        "zones": ["上野", "王子"],
+        "story_use": [
+          "クナド勢生活圏",
+          "接触・観測・誘導",
+          "第一章との接続点"
+        ]
+      },
+      "kasumigaseki_axis": {
+        "classification": "国家中枢圏",
+        "zones": ["霞が関", "警視庁本部", "首相官邸", "皇居"],
+        "story_use": [
+          "政府中枢",
+          "第二章戦争領域",
+          "本丸直前の誤認戦場"
+        ]
+      },
+      "oku_tama_axis": {
+        "classification": "隔離・偽装圏",
+        "zones": ["奥多摩特殊収監施設"],
+        "story_use": [
+          "ダミー本拠地",
+          "危険イド収監",
+          "美鶴襲撃地点"
+        ]
+      }
+    },
+
+    "kasukabe": {
+      "label": "薬師寺探偵事務所圏",
+      "surface_sites": {
+        "mitsuru_office": {
+          "type": "探偵事務所",
+          "role": ["美鶴の拠点", "恵美の生活導線"],
+          "note": [
+            "政治家殺害事件後に報道で特定される",
+            "恵美保護の発端となる"
+          ]
+        },
+        "local_police": {
+          "type": "地元警察署",
+          "role": [
+            "恵美の一時保護",
+            "政府引き渡し遅延の発生点"
+          ]
+        }
+      },
+      "structural_meaning": [
+        "国家中枢から離れた生活圏",
+        "日常が破壊される起点",
+        "恵美が“普通の少女”として扱われる最後の場所"
+      ]
+    },
+
+    "ueno": {
+      "label": "交差点",
+      "sites": {
+        "ueno_park": {
+          "type": "公共空間",
+          "role": [
+            "第一章でクナドと接触した地点",
+            "異常が日常へ混ざる場所"
+          ]
+        }
+      },
+      "structural_meaning": [
+        "美鶴とクナドの初期交差点",
+        "王子拠点から近く、偶然を装える地点"
+      ]
+    },
+
+    "ouji": {
+      "label": "クナド勢拠点圏",
+      "surface_sites": {
+        "church": {
+          "type": "教会",
+          "role": [
+            "クナド勢の地上偽装拠点",
+            "第三章で恵美が接触可能な回復導線"
+          ],
+          "environment": [
+            "閑静な住宅街",
+            "地域信者多め",
+            "治安良好",
+            "インフラ安定"
+          ]
+        },
+        "bar": {
+          "type": "バー",
+          "role": [
+            "クナドと美鶴の対話地点",
+            "教会近傍の観測点"
+          ],
+          "note": [
+            "地上の中継所",
+            "王子拠点と生活圏を自然に接続"
+          ]
+        }
+      },
+      "underground_sites": {
+        "kunad_base": {
+          "type": "クナド勢地下本拠地",
+          "role": [
+            "会合",
+            "人員配置",
+            "因子観測",
+            "都市介入準備"
+          ],
+          "secrecy": [
+            "一般信者は非認知",
+            "地上の教会機能とは分離"
+          ]
+        }
+      },
+      "structural_meaning": [
+        "静けさの中の異常",
+        "恵美にとって近すぎる敵地",
+        "日常に溶け込んだ外界側拠点"
+      ]
+    },
+
+    "oku_tama": {
+      "label": "ダミー本拠地",
+      "cover_identity": {
+        "type": "国家災害対策・特殊矯正施設",
+        "public_names": [
+          "関東特別矯正施設",
+          "高度危険犯罪者収容施設",
+          "広域防災統合管理施設"
+        ]
+      },
+      "surface_sites": {
+        "administration_block": {
+          "type": "管理棟",
+          "role": ["表向き施設運営", "警備・受付・監視"]
+        },
+        "security_perimeter": {
+          "type": "重警備外周",
+          "role": ["武装警備", "外部遮断"]
+        }
+      },
+      "underground_sites": {
+        "prison_layer": {
+          "type": "特殊収監区画",
+          "role": ["凶悪犯・危険対象収容", "外向け監獄機能"]
+        },
+        "ido_layer": {
+          "type": "イド収監区画",
+          "role": [
+            "危険イド隔離",
+            "対策室上層が本拠地と誤認する領域"
+          ]
+        },
+        "genjuro_cell": {
+          "type": "最深部封印区画",
+          "role": ["田中源十郎収監"],
+          "seal_conditions": ["影なし", "常時照明", "宙吊り"]
+        },
+        "ano_cell": {
+          "type": "深層隔離区画",
+          "role": ["阿野翔太収監"],
+          "seal_conditions": ["高低差封殺", "シエスタ因子層退避"]
+        }
+      },
+      "structural_meaning": [
+        "政府が見せる偽の本丸",
+        "優秀な人間ほど騙される場所",
+        "美鶴の反逆開始点"
+      ]
+    },
+
+    "kasumigaseki": {
+      "label": "国家戦場",
+      "surface_sites": {
+        "government_blocks": {
+          "type": "官庁街",
+          "role": ["省庁ビル群", "第二章戦争地上戦域"]
+        },
+        "barricade_lines": {
+          "type": "封鎖線",
+          "role": ["一般人避難", "軍・警察による封鎖"]
+        },
+        "road_network": {
+          "type": "主要幹線道路",
+          "role": ["車両移送", "迎撃戦線"]
+        }
+      },
+      "underground_sites": {
+        "dogma_counter_room": {
+          "type": "ドグマ対策室",
+          "role": ["現場実務中枢", "戦闘・収容運用"]
+        },
+        "public_research_layer": {
+          "type": "表の研究施設",
+          "role": ["サンプル分析", "データ処理"],
+          "note": [
+            "一般研究員の活動領域",
+            "実物・本丸への接触なし"
+          ]
+        },
+        "ido_related_facility": {
+          "type": "イド関連地下施設",
+          "role": [
+            "一時運用",
+            "移送受け入れ",
+            "対策室が中枢と思い込みやすい領域"
+          ]
+        },
+        "emi_transport_route": {
+          "type": "恵美搬入導線",
+          "role": ["春日部→東京移送終点予定ルート"],
+          "note": ["PART07で官庁街突入前に奪取される"]
+        }
+      },
+      "structural_meaning": [
+        "政府が防衛する誤認戦場",
+        "本丸直前だが本丸ではない",
+        "三勢力衝突の主戦場"
+      ]
+    },
+
+    "police_headquarters": {
+      "label": "本庁",
+      "relation_to_kasumigaseki": ["隣接圏"],
+      "role": ["警察初動対応", "情報統制", "国家事件の入口"],
+      "structural_meaning": [
+        "千歳が核心に最も近いのに届かない場所",
+        "間に合わなかった主人公の起点"
+      ]
+    },
+
+    "prime_minister_office": {
+      "label": "政治中枢",
+      "role": [
+        "黒田隼人の実務中枢",
+        "最終政治判断",
+        "軍・対策室運用承認"
+      ],
+      "note": [
+        "皇居より一歩外側",
+        "戦場の中心ではなく指揮点"
+      ],
+      "structural_meaning": [
+        "意思決定の場所",
+        "国家が壊れる判断が下される場所"
+      ]
+    },
+
+    "imperial_palace": {
+      "label": "本丸",
+      "surface_identity": {
+        "type": "皇居／宮内庁管理領域"
+      },
+      "underground_sites": {
+        "imperial_core": {
+          "type": "本研究施設",
+          "role": [
+            "外界研究所（本体）",
+            "結城沙耶管理",
+            "S-9関連",
+            "外界因子関連保管"
+          ]
+        },
+        "access_note": [
+          "接続構造を知る者は極少数",
+          "官庁街地下より近いが秘匿性は最上位"
+        ]
+      },
+      "structural_meaning": [
+        "国家の真実",
+        "誰も辿り着いていない核心",
+        "第二章では守られ切る最終領域"
+      ]
+    },
+
+    "underground_connection": {
+      "principle": [
+        "物理的には接続されている",
+        "認識は分断されている",
+        "全体像を知る者は極少数"
+      ],
+      "segments": {
+        "surface_infra_segment": {
+          "role": ["防災・保守・表向き導線"],
+          "visible_to": ["一般警備", "建設関係者", "非イド警察"]
+        },
+        "kasumigaseki_segment": {
+          "role": ["ドグマ対策室・表研究施設接続"],
+          "visible_to": ["対策室上位", "官庁街研究員（一部）"]
+        },
+        "okutama_false_core_segment": {
+          "role": ["ダミー本拠地接続"],
+          "visible_to": ["奥多摩上位管理者", "対策室上位"]
+        },
+        "imperial_core_segment": {
+          "role": ["皇居地下本丸接続"],
+          "visible_to": ["黒田隼人", "日下部麗子", "結城教授"]
+        }
+      }
+    },
+
+    "part_07_battle_overlay": {
+      "main_battlefield": [
+        "霞が関地上",
+        "道路封鎖区域",
+        "官庁街外縁"
+      ],
+      "chase_axis": [
+        "高速道路出口付近",
+        "都心高所",
+        "ビル街"
+      ],
+      "defense_priority": [
+        "官庁街地下への侵入阻止",
+        "皇居地下への接続秘匿維持"
+      ],
+      "war_meaning": [
+        "間違った場所で起きる正しい戦争",
+        "本丸直前の誤認衝突"
+      ]
+    },
+
+    "narrative_definition": [
+      "春日部＝壊された日常",
+      "上野＝異常との交差点",
+      "王子＝静かな敵地",
+      "奥多摩＝偽の本丸",
+      "霞が関＝誤認戦場",
+      "官邸＝意思決定",
+      "皇居地下＝真実"
+    ],
+
+    "status": {
+      "version": "v1.0_FULL",
+      "authority": {
+        "status": "canonical",
+        "scope": "world_map_definition"
+      },
+      "contradiction_check": {
+        "world_log": "NONE",
+        "world_rules": "NONE",
+        "access_hierarchy": "NONE",
+        "story_code": "NONE"
+      },
+      "dependency_alignment": [
+        "WORLD_LOG v1.4.1_FULL",
+        "WORLD_RULES v1.4_FULL",
+        "ACCESS_HIERARCHY_LOG",
+        "DD_STORY_CODE v1.1"
+      ],
+      "notes": [
+        "本ログは第二章時点の地理・構造を固定する",
+        "人物配置・時系列移動は含まない",
+        "アクセス権限は別ログで管理される"
+      ],
+      "safe_to_lock": true,
+      "lock_status": "LOCKED"
+    }
+  }
+}

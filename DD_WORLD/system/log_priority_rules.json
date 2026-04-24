@@ -1,0 +1,34 @@
+{
+  "log_priority_rules": {
+    "file_role": {
+      "description": "このファイルは、DD_PROJECT内の各ログが矛盾したとき、どのログを基準として採用するかを定義する。"
+    },
+    "priority_order": {
+      "description": "上にあるログほど優先度が高い。下位ログは上位ログを書き換えられない。",
+      "order": [
+        "WORLD_BUNDLE",
+        "WORLD_LOG",
+        "WORLD_RULES",
+        "DD_STORY_CODE",
+        "WORLD_INDEX_LOG",
+        "CHARACTER_LOG",
+        "CHAPTER_STORY"
+      ]
+    },
+    "contradiction_resolution": {
+      "description": "複数ログが矛盾した場合は、優先度の高いログを採用する。下位ログは修正候補または未確定扱いとする。"
+    },
+    "patch_policy": {
+      "description": "PATCHは本体ログを書き換えず、適用対象に対する差分として扱う。PATCH適用後の解釈を有効とする。"
+    },
+    "index_policy": {
+      "description": "INDEXは参照専用であり、世界定義や物語制約の根拠にはならない。本体ログと矛盾した場合は本体ログを優先する。"
+    },
+    "character_and_story_policy": {
+      "description": "CHARACTER_LOGおよびCHAPTER_STORYは世界本体に従属する。新しい例外や制約を作る場合はPATCHを必須とする。"
+    },
+    "unresolved_conflict_policy": {
+      "description": "上位ログ同士で矛盾が出た場合は、補完せず保留として扱う。必要に応じてPATCHで明示的に解決する。"
+    }
+  }
+}

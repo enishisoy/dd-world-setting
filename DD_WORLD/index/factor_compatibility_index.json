@@ -1,0 +1,204 @@
+{
+  "FACTOR_COMPATIBILITY_INDEX": {
+    "index_id": "FACTOR_COMPATIBILITY_MATRIX_2026",
+    "version": "v1.0_FULL",
+    "document_role": "REFERENCE_INDEX",
+    "authority": {
+      "status": "canonical_index_candidate",
+      "scope": "factor_interaction_reference"
+    },
+    "system_note": [
+      "本インデックスは外界因子同士の相互作用傾向を定義する。",
+      "能力定義・勝敗判定・キャラクター設計の直接根拠には使用しない。",
+      "世界ルール・キャラクターログ・席ログを上書きしない。"
+    ],
+    "reference_policy": {
+      "post_character_log_lock_only": false,
+      "status": "REVIEW_REQUIRED",
+      "note": "既存のPOST_CHARACTER_LOG_LOCK参照制限と衝突するため、正式運用変更には別途PROCEDURE_PATCHが必要。"
+    },
+    "factor_terms": {
+      "1_EXISTENCE": {
+        "number": 1,
+        "jp": "存在"
+      },
+      "2_BOUNDARY": {
+        "number": 2,
+        "jp": "境界"
+      },
+      "3_INTERFERENCE": {
+        "number": 3,
+        "jp": "干渉"
+      },
+      "4_ORDER": {
+        "number": 4,
+        "jp": "秩序"
+      },
+      "5_INHERITANCE": {
+        "number": 5,
+        "jp": "継承"
+      },
+      "6_ACCEPTANCE": {
+        "number": 6,
+        "jp": "受容"
+      },
+      "7_LEAP": {
+        "number": 7,
+        "jp": "跳躍"
+      },
+      "8_NEGATION": {
+        "number": 8,
+        "jp": "否定"
+      },
+      "9_CRITICALITY": {
+        "number": 9,
+        "jp": "臨界"
+      }
+    },
+    "compatibility_terms": {
+      "SELF": {
+        "jp": "同一",
+        "description": "同一因子。重複しても原則として増幅ではなく同質反応として扱う。"
+      },
+      "SYNC": {
+        "jp": "親和",
+        "description": "自然に噛み合いやすく、抵抗が比較的少ない組み合わせ。"
+      },
+      "TENSION": {
+        "jp": "緊張",
+        "description": "条件次第で成立するが、制御や文脈を必要とする組み合わせ。"
+      },
+      "FRICTION": {
+        "jp": "阻害",
+        "description": "運用抵抗が大きく、拒絶・不安定化を起こしやすい組み合わせ。"
+      },
+      "PARADOX": {
+        "jp": "矛盾",
+        "description": "論理的衝突を起こしやすく、優位因子・宿主状態・席性質により結果が変動する組み合わせ。"
+      }
+    },
+    "compatibility_matrix": {
+      "1_EXISTENCE": {
+        "1_EXISTENCE": "SELF",
+        "2_BOUNDARY": "TENSION",
+        "3_INTERFERENCE": "SYNC",
+        "4_ORDER": "SYNC",
+        "5_INHERITANCE": "SYNC",
+        "6_ACCEPTANCE": "TENSION",
+        "7_LEAP": "TENSION",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "FRICTION"
+      },
+      "2_BOUNDARY": {
+        "1_EXISTENCE": "TENSION",
+        "2_BOUNDARY": "SELF",
+        "3_INTERFERENCE": "FRICTION",
+        "4_ORDER": "FRICTION",
+        "5_INHERITANCE": "TENSION",
+        "6_ACCEPTANCE": "TENSION",
+        "7_LEAP": "FRICTION",
+        "8_NEGATION": "PARADOX",
+        "9_CRITICALITY": "TENSION"
+      },
+      "3_INTERFERENCE": {
+        "1_EXISTENCE": "SYNC",
+        "2_BOUNDARY": "FRICTION",
+        "3_INTERFERENCE": "SELF",
+        "4_ORDER": "SYNC",
+        "5_INHERITANCE": "SYNC",
+        "6_ACCEPTANCE": "TENSION",
+        "7_LEAP": "TENSION",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "FRICTION"
+      },
+      "4_ORDER": {
+        "1_EXISTENCE": "SYNC",
+        "2_BOUNDARY": "FRICTION",
+        "3_INTERFERENCE": "SYNC",
+        "4_ORDER": "SELF",
+        "5_INHERITANCE": "SYNC",
+        "6_ACCEPTANCE": "TENSION",
+        "7_LEAP": "FRICTION",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "TENSION"
+      },
+      "5_INHERITANCE": {
+        "1_EXISTENCE": "SYNC",
+        "2_BOUNDARY": "TENSION",
+        "3_INTERFERENCE": "SYNC",
+        "4_ORDER": "SYNC",
+        "5_INHERITANCE": "SELF",
+        "6_ACCEPTANCE": "SYNC",
+        "7_LEAP": "TENSION",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "TENSION"
+      },
+      "6_ACCEPTANCE": {
+        "1_EXISTENCE": "TENSION",
+        "2_BOUNDARY": "TENSION",
+        "3_INTERFERENCE": "TENSION",
+        "4_ORDER": "TENSION",
+        "5_INHERITANCE": "SYNC",
+        "6_ACCEPTANCE": "SELF",
+        "7_LEAP": "SYNC",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "SYNC"
+      },
+      "7_LEAP": {
+        "1_EXISTENCE": "TENSION",
+        "2_BOUNDARY": "FRICTION",
+        "3_INTERFERENCE": "TENSION",
+        "4_ORDER": "FRICTION",
+        "5_INHERITANCE": "TENSION",
+        "6_ACCEPTANCE": "SYNC",
+        "7_LEAP": "SELF",
+        "8_NEGATION": "FRICTION",
+        "9_CRITICALITY": "PARADOX"
+      },
+      "8_NEGATION": {
+        "1_EXISTENCE": "FRICTION",
+        "2_BOUNDARY": "PARADOX",
+        "3_INTERFERENCE": "FRICTION",
+        "4_ORDER": "FRICTION",
+        "5_INHERITANCE": "FRICTION",
+        "6_ACCEPTANCE": "FRICTION",
+        "7_LEAP": "FRICTION",
+        "8_NEGATION": "SELF",
+        "9_CRITICALITY": "PARADOX"
+      },
+      "9_CRITICALITY": {
+        "1_EXISTENCE": "FRICTION",
+        "2_BOUNDARY": "TENSION",
+        "3_INTERFERENCE": "FRICTION",
+        "4_ORDER": "TENSION",
+        "5_INHERITANCE": "TENSION",
+        "6_ACCEPTANCE": "SYNC",
+        "7_LEAP": "PARADOX",
+        "8_NEGATION": "PARADOX",
+        "9_CRITICALITY": "SELF"
+      }
+    },
+    "usage_restrictions": [
+      "この表を直接の能力定義に使用しない",
+      "この表のみで勝敗・強弱を決定しない",
+      "席・教義・キャラクター固有ログを上書きしない",
+      "世界ルールではなく参照索引として扱う"
+    ],
+    "operational_notes": [
+      "同じ組み合わせでも宿主状態・席性質・章文脈により結果は変化する。",
+      "否定因子（8）は孤立性が高い。",
+      "境界因子（2）は複合時に不安定化しやすい。",
+      "跳躍因子（7）は汎用性があるが阻害・矛盾も多い。",
+      "親和は安全を意味せず、阻害は不可能を意味しない。"
+    ],
+    "status": {
+      "contradiction_check": {
+        "world_log": "NONE",
+        "world_rules": "REVIEW_REQUIRED",
+        "world_index_log": "NONE"
+      },
+      "safe_to_lock": false,
+      "lock_status": "PENDING_REVIEW"
+    }
+  }
+}
