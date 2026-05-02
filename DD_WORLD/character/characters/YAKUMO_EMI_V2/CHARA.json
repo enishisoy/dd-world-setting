@@ -1,0 +1,111 @@
+{
+  "CHARA": {
+    "identity": {
+      "character_key": "YAKUMO_EMI",
+      "name": "八雲恵美",
+      "name_kana": "やくもえみ",
+      "classification": "異度（IDO）",
+      "faction": "個人",
+      "occupation": "学生"
+    },
+
+    "status": {
+      "survival": "生存",
+      "terminal_state": "第五章終端生存",
+      "notes": "外界機構の時代を終わらせた後、結城沙耶とともに日常へ戻る。"
+    },
+
+    "core": {
+      "core_motive": "未来を選び続ける",
+      "worldview": "生きることは死ぬことである。不老不死や死の否定は未来を奪う行為であり、世界の循環を破壊する。",
+      "fear": "未来の喪失",
+      "values_top3": ["未来", "選択", "意志"]
+    },
+
+    "age_by_chapter": {
+      "chapter_1": 10,
+      "chapter_2": 15,
+      "chapter_3": 16,
+      "chapter_4": 20,
+      "chapter_5": 20
+    },
+
+    "appearance_by_chapter": {
+      "chapter_1": {
+        "description": "黒髪の少女。黒いワンピースを着た幼い姿。警戒心が強く、感情を閉ざしている。"
+      },
+      "chapter_2": {
+        "description": "黒髪ボブ、眼鏡、黒い学生服。赤いリボン。真面目で硬い印象。"
+      },
+      "chapter_3": {
+        "description": "黒い学生服の上に赤いコートを羽織る。戦闘と逃亡を経て衣服は傷み、精神的にも不安定。"
+      },
+      "chapter_4": {
+        "description": "赤いコートを羽織った女性。黒髪・眼鏡。落ち着きと鋭さを併せ持つ。"
+      },
+      "chapter_5": {
+        "description": "第四章と同様の装い。赤いコートは美鶴の遺品として保持。"
+      }
+    },
+
+    "appearance_common": {
+      "hair": "黒",
+      "eyes": "黒",
+      "build": "細身",
+      "notable_features": [
+        "戦闘経験による傷",
+        "常に眼鏡を着用"
+      ],
+      "trademarks": [
+        "断罪剣",
+        "赤いコート（美鶴の遺品）"
+      ]
+    },
+
+    "personality_by_chapter": {
+      "chapter_1": "怯えと警戒。強い喪失により感情を閉ざしている。",
+      "chapter_2": "真面目で抑圧的。美鶴への依存が強い。",
+      "chapter_3": "断罪衝動により苛立ちと攻撃性が顕在化。精神的に不安定。",
+      "chapter_4": "冷静さを取り戻し、未来を選ぶ意思を確立する。",
+      "chapter_5": "達観と受容。選択の結果を受け入れた状態。"
+    },
+
+    "combat_style": {
+      "base": "後衛支援型",
+      "detail": "基本はレティを前衛に配置し、自身は状況判断と補助を行う。",
+      "exception": "断罪剣使用時のみ前線に出る。",
+      "note": "第四章以降、人間相手であれば一定の戦闘能力を持つが、軍人には劣る。"
+    },
+
+    "self_perception": "結城沙耶とともに生きる一人の人間",
+
+    "relationships": [
+      {
+        "target": "YAKUMO_SATOMI",
+        "relation": "姉",
+        "note": "第五章で対立。アルマ破壊後に智美は崩壊し消滅。"
+      },
+      {
+        "target": "YUKI_SAYA",
+        "relation": "協力者",
+        "note": "最終章の生存者。ともに日常へ戻る存在。"
+      },
+      {
+        "target": "KUNAD",
+        "relation": "敵対→終結",
+        "note": "第四章で断罪。銀の鍵を託される。"
+      },
+      {
+        "target": "RETTY_S18",
+        "relation": "相棒",
+        "note": "美鶴から継承された外界機構。第二章終盤から第五章終盤まで恵美の味方を貫く。"
+      }
+    ],
+
+    "invalid_interpretations": [
+      "救世主",
+      "完全な善",
+      "世界の支配者"
+    ]
+  }
+}
