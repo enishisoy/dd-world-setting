@@ -1,0 +1,105 @@
+{
+  "EXECUTION_MEDIUM": {
+    "id": "D18_JUDGMENT_BLADE",
+    "name": "断罪剣",
+    "aliases": [
+      "断罪剣",
+      "だんざいけん",
+      "ジャッジメントブレード",
+      "Judgment Blade",
+      "Judgement Blade"
+    ],
+
+    "linked_doctrine": "D-18",
+    "provider": "S-18_LETTY",
+    "user": "YAKUMO_EMI",
+
+    "core_concept": "対象の自責構造を切除し、その罪を使用者が引き受けることで断罪を成立させる外部媒体",
+
+    "activation_conditions": {
+      "required": [
+        "対象が自身の罪を認識している",
+        "対象が断罪対象の罪を理解している",
+        "対象が断罪剣の効果を理解している",
+        "使用者（恵美）がその罪を引き受ける覚悟を持つ"
+      ],
+      "exception": [
+        "現行犯の場合は認識条件を一部無視して発動可能"
+      ]
+    },
+
+    "effect": {
+      "primary": [
+        "対象の自責を完全切除する"
+      ],
+      "result_on_target": [
+        "対象にとってその罪は存在しなかったことになる"
+      ]
+    },
+
+    "non_effect": [
+      "行為そのものは消えない",
+      "世界への影響は変化しない",
+      "被害は修復されない"
+    ],
+
+    "side_effect": {
+      "structure": [
+        "切除された罪は消滅しない",
+        "帰属を失った罪が発生する"
+      ],
+      "transfer": [
+        "その罪は使用者（恵美）に引き受けられる"
+      ]
+    },
+
+    "user_impact": {
+      "visibility": "本人のみ自覚可能",
+      "accumulation": true,
+      "external_effect": "なし"
+    },
+
+    "limitations": [
+      "席には無効",
+      "刀で切断できない対象には発動しない",
+      "対象の主観に強く依存する"
+    ],
+
+    "mechanics": {
+      "judge_basis": "対象の主観 + 恵美の認知",
+      "amplification": "恵美が罪深いと認識するほど強度が上昇"
+    },
+
+    "philosophical_position": [
+      "恵美の思想（罪を背負って生きる）と矛盾する力",
+      "救済ではなく尊厳の剥奪",
+      "最終手段としてのみ許容される"
+    ],
+
+    "usage_policy": [
+      "原則使用しない",
+      "レティによる物理的解決を優先",
+      "対象の未来を奪うと判断した場合のみ使用"
+    ],
+
+    "special_cases": {
+      "sakaki": {
+        "description": "本人の意思ではない罪と判断し、その罪のみを切除",
+        "result": {
+          "target": "救済",
+          "world": "変化なし",
+          "emi": "罪の引き受け"
+        }
+      },
+
+      "kunad": {
+        "description": "魂核に干渉し、人間時の罪を成立させた上で断罪",
+        "result": [
+          "自己認識の発生",
+          "構造崩壊"
+        ],
+        "note": "通常の断罪条件では効果は発動しないが、魂核接触により例外的に成立"
+      }
+    }
+  }
+}
