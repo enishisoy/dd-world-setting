@@ -1,9 +1,0 @@
-{
-  "PATCHES": {
-    "policy": {
-      "old_full_log_immutable_reference": true,
-      "all_changes_go_to_patches": true
-    },
-    "applied_patches": []
-  }
-}
