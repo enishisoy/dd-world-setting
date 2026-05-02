@@ -3,10 +3,12 @@ import express from "express";
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const BASE_URL =
-  "https://raw.githubusercontent.com/enishisoy/dd-world-setting/main/DD_WORLD";
+const OWNER = "enishisoy";
+const REPO = "dd-world-setting";
+const BRANCH = "main";
+const ROOT = "DD_WORLD";
 
-const FILES = [
+const FIXED_FILES = [
   "build/build_index.json",
   "system/patch_set_latest.json",
   "world/world_bundle.json",
@@ -19,6 +21,43 @@ const FILES = [
   "index/world_index_log.json",
   "index/factor_compatibility_index.json"
 ];
+
+async function fetchJsonFile(path) {
+  const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${ROOT}/${path}`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    return { ok: false, status: response.status, url };
+  }
+
+  return { ok: true, data: await response.json(), url };
+}
+
+async function listJsonFiles(dir) {
+  const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${ROOT}/${dir}?ref=${BRANCH}`;
+  const response = await fetch(apiUrl);
+
+  if (!response.ok) {
+    return [];
+  }
+
+  const items = await response.json();
+  let results = [];
+
+  for (const item of items) {
+    if (item.type === "file" && item.name.endsWith(".json")) {
+      results.push(`${dir}/${item.name}`);
+    }
+
+    if (item.type === "dir") {
+      const childDir = `${dir}/${item.name}`;
+      const childFiles = await listJsonFiles(childDir);
+      results = results.concat(childFiles);
+    }
+  }
+
+  return results;
+}
 
 app.get("/", (req, res) => {
   res.json({
@@ -34,30 +73,23 @@ app.get("/health", (req, res) => {
 
 app.get("/world", async (req, res) => {
   try {
+    const dynamicFiles = [
+      ...(await listJsonFiles("character")),
+      ...(await listJsonFiles("story"))
+    ];
+
+    const allFiles = [...new Set([...FIXED_FILES, ...dynamicFiles])];
+
     const files = {};
 
-    for (const file of FILES) {
-      const url = `${BASE_URL}/${file}`;
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        files[file] = {
-          ok: false,
-          status: response.status,
-          url
-        };
-        continue;
-      }
-
-      files[file] = {
-        ok: true,
-        data: await response.json()
-      };
+    for (const file of allFiles) {
+      files[file] = await fetchJsonFile(file);
     }
 
     res.json({
       ok: true,
-      source: BASE_URL,
+      source: `https://github.com/${OWNER}/${REPO}/tree/${BRANCH}/${ROOT}`,
+      total_files: allFiles.length,
       files
     });
   } catch (error) {
