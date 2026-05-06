@@ -32,6 +32,15 @@ async function fetchJsonFile(path) {
 
   const text = await response.text();
 
+  if (text.trim() === "") {
+    return {
+      ok: false,
+      error: "Empty JSON file",
+      url,
+      path
+    };
+  }
+
   try {
     return { ok: true, data: JSON.parse(text), url, path };
   } catch (error) {
