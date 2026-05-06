@@ -1,0 +1,214 @@
+{
+  "identity": {
+    "name": "クナド",
+    "reading": "くなど",
+    "classification": "異度（IDO）",
+    "origin_era": "中世ヨーロッパ",
+    "chronological_age": "400年以上",
+    "apparent_age": {
+      "chapter_1_to_4_early": "老人",
+      "chapter_4_late": "20代後半"
+    },
+    "body_status": {
+      "original_body_exists": false,
+      "current_body": "他者から簒奪した肉体",
+      "body_replacement": "老朽化の度に交換"
+    },
+    "aliases": [
+      "24席創設者",
+      "簒奪者",
+      "外界接触例外"
+    ]
+  },
+  "appearance": {
+    "chapter_1_to_4_early": {
+      "build": "長身",
+      "hair": "白髪",
+      "facial_hair": "口髭",
+      "clothing": [
+        "ロングコート",
+        "スーツ",
+        "杖"
+      ],
+      "impression": "貴族的な老人"
+    },
+    "chapter_4_late": {
+      "build": "細身",
+      "hair": "黒髪",
+      "face": "端正",
+      "clothing": [
+        "ロングコート",
+        "スーツ"
+      ],
+      "impression": "妖しさを持つ青年"
+    }
+  },
+  "core": {
+    "outer_world_contact": true,
+    "exception_status": "外界接触例外（三例の一人）",
+    "origin_desire": "戦場から生きて帰り、家族や戦友と再会すること",
+    "post_contact_result": {
+      "self_identity": "喪失",
+      "mind_structure": "複数意識の集合構造",
+      "original_soul_status": "集合意識の中に埋没",
+      "remaining_drive": "死なないこと"
+    },
+    "misinterpretation": {
+      "description": "生きて帰るための願いが湾曲し、不老不死への欲求へ変質した",
+      "self_awareness": "本人はなぜ不老不死を望むようになったのか理解していない"
+    },
+    "fear": {
+      "primary": "終わること",
+      "description": "終わることを誰よりも恐れている"
+    },
+    "later_desire": "永遠に生き、この世界を観測すること"
+  },
+  "personality": {
+    "surface_behavior": [
+      "穏やか",
+      "礼儀的",
+      "理性的",
+      "仲間思いな性質の残存"
+    ],
+    "emotion_status": {
+      "acting": false,
+      "note": "本人は演じているつもりはないが、個としての感情とは異なる"
+    },
+    "self_recognition": {
+      "possible": false,
+      "reason": "個として自身を認識できないため"
+    },
+    "human_attachment": {
+      "exists": true,
+      "origin": "元々仲間思いな人物だった性質が残存している"
+    }
+  },
+  "relationships": {
+    "yagumo_emi": {
+      "relation": "討伐者",
+      "description": "第四章で自身を断罪した存在"
+    },
+    "miroku": {
+      "relation": [
+        "協力者",
+        "仲間",
+        "友"
+      ],
+      "description": "外界接触を生き延びた例外"
+    },
+    "yuki_saya": {
+      "relation": [
+        "奪取対象",
+        "完全イド"
+      ],
+      "description": "未来のドグマと暴走しない器を持つ存在"
+    },
+    "kunizaki_tadamichi": {
+      "relation": "旧友",
+      "description": "可能性を恐れS-24を与えた相手"
+    },
+    "barome": {
+      "relation": [
+        "仲間",
+        "恐怖対象"
+      ],
+      "description": "9因子頭を持つ危険存在"
+    },
+    "fallen_comrades": {
+      "relation": "存在核",
+      "description": "外界で統合された戦友たち"
+    },
+    "lost_family": {
+      "relation": "帰還願望",
+      "description": "既に死亡している家族"
+    }
+  },
+  "combat_style": {
+    "battle_philosophy": {
+      "combat_view": "遊び",
+      "seriousness_condition": "必要時のみ真剣化",
+      "primary_goal": "生存継続",
+      "secondary_goal": "ドグマ獲得",
+      "description": "正面戦闘ではなく、遊戯と条件成立によって勝利する"
+    },
+    "physical_combat": {
+      "direct_combat_level": "常識的範囲",
+      "armed_combat": {
+        "uses_cane": true,
+        "skill_level": "ある程度戦える"
+      },
+      "vs_trained_soldier": {
+        "result": "不利"
+      },
+      "mutation_state": {
+        "chapter_4_only": true,
+        "description": "若い肉体と暴走状態で触手化戦闘を行う"
+      }
+    },
+    "game_structure": {
+      "dogma": "D-1' 遊戯",
+      "activation": {
+        "requires_agreement": true,
+        "description": "提案と了承によって遊戯状態を成立させる"
+      },
+      "effect": {
+        "description": "ゲームの提案を拒否できなくする"
+      },
+      "victory_condition": {
+        "variable": true,
+        "description": "遊戯内容ごとに変化"
+      },
+      "betting_system": {
+        "possible_targets": [
+          "物",
+          "権利",
+          "魂",
+          "ドグマ"
+        ]
+      }
+    },
+    "seat_usage": {
+      "primary_seat": {
+        "seat_id": "S-1",
+        "seat_name": "フリード"
+      },
+      "seat_function": {
+        "description": "勝敗により物や権利を強制的に譲渡させる"
+      },
+      "combat_capability": {
+        "autonomous": true,
+        "anti_human": "人間軍隊と交戦可能",
+        "anti_seat": "戦闘特化席には劣る"
+      },
+      "classification": {
+        "existence_type": "顕現式",
+        "machine_classification": "顕現式概念機構",
+        "communication": false,
+        "emotion": false
+      }
+    },
+    "usurpation": {
+      "dogma": "D-1 簒奪",
+      "effect": "抵抗力のない者から撓界因子を奪う",
+      "requirement": [
+        "対象が弱体化している",
+        "対象がイド",
+        "対象がドグマを最大限理解している"
+      ],
+      "result": {
+        "target": "死亡",
+        "kunad": "ドグマ取得"
+      }
+    },
+    "loss_condition": {
+      "game_defeat": {
+        "effect": "集合意識内の魂が一つ消滅",
+        "additional_effect": "相手へドグマ譲渡可能"
+      },
+      "retry_behavior": {
+        "exists": true,
+        "description": "再度別条件で勝負を行う場合がある"
+      }
+    }
+  }
+}

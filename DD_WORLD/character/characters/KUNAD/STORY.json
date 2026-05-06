@@ -1,0 +1,125 @@
+{
+  "story": {
+    "outer_world_contact": {
+      "era": "中世",
+      "location": "戦場",
+      "trigger": {
+        "description": "複数の究極感情エネルギーと外界の意思が天文学的確率で反応"
+      },
+      "general_result": [
+        "精神崩壊",
+        "ログ消滅",
+        "肉体崩壊"
+      ],
+      "kunad_result": {
+        "description": "唯一の生存例",
+        "survival_reason": "家族と戦友の元へ帰るという想い",
+        "post_contact_result": [
+          "戦友との存在統合",
+          "複数意識混在",
+          "自我消失",
+          "目的のみ残存"
+        ]
+      },
+      "misinterpretation": {
+        "description": "外界は応答しないが、クナドは『この世界と繋ぐべき』と誤訳した",
+        "core_error": "意味のないものに意味を与えた"
+      }
+    },
+    "seat_creation": {
+      "initial_creation": {
+        "seat_id": "S-1",
+        "seat_name": "フリード",
+        "description": "最初に作られた外界機構"
+      },
+      "root_seats": {
+        "count": 9,
+        "description": "根源席として構築"
+      },
+      "full_system": {
+        "count": 24,
+        "description": "現代までに24席を完成させた"
+      },
+      "creation_method": {
+        "description": "外界接触によって得た知識を利用"
+      },
+      "purpose": {
+        "description": "外界の意思をこの世界へ繋ぐための座"
+      }
+    },
+    "integrated_existence": {
+      "fallen_comrades": {
+        "description": "外界内で戦友たちと存在統合された",
+        "result": "クナド内部に複数意識が混在"
+      },
+      "family": {
+        "description": "家族は戦場に存在しておらず統合されなかった",
+        "result": "既に死亡"
+      }
+    },
+    "immortality_distortion": {
+      "origin": {
+        "description": "生きて帰りたいという願い"
+      },
+      "distortion": {
+        "description": "願いが湾曲し、不老不死への執着へ変質"
+      },
+      "later_desire": {
+        "description": "永遠に生き、この世界を観測したいと考えるようになる"
+      }
+    },
+    "saya_plan": {
+      "target": "結城沙耶",
+      "purposes": [
+        "暴走回避",
+        "若い肉体の獲得",
+        "未来のドグマ使用",
+        "不老不死ドグマ探索の継続"
+      ],
+      "reason": {
+        "description": "沙耶は暴走しない完全イドであった"
+      },
+      "expected_result": {
+        "description": "長期的な生存維持と不老不死到達"
+      }
+    },
+    "chapter_4_terminal": {
+      "trigger": {
+        "description": "八雲恵美による断罪"
+      },
+      "result": {
+        "description": "クナドは自我を一時的に取り戻す"
+      },
+      "memory_recovery": {
+        "description": "なぜ永遠を求めていたのかを思い出す"
+      },
+      "realization": {
+        "description": "その願いが既に意味を失っていることを理解する"
+      }
+    },
+    "silver_key": {
+      "type": "物理鍵",
+      "origin": "外界知識による作成",
+      "recipient": "八雲恵美",
+      "function": {
+        "description": "クナド地下施設へのアクセス"
+      },
+      "underground_facility": {
+        "description": "異界化した地下空間",
+        "contents": [
+          "外界機構保管庫",
+          "S-9"
+        ]
+      }
+    },
+    "final_state": {
+      "true_kunad": {
+        "description": "中世に存在した本来のクナド",
+        "result": "ログデリート"
+      },
+      "remaining_structure": {
+        "description": "『クナド』という構造体・怪物性のみがログとして残存"
+      }
+    }
+  }
+}

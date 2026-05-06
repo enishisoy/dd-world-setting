@@ -1,0 +1,104 @@
+{
+  "seats": [
+    {
+      "seat_id": "S-1",
+      "seat_name": "フリード",
+      "aliases": [
+        "Fried"
+      ],
+      "existence_type": "顕現式",
+      "machine_classification": "顕現式概念機構",
+      "summary": "遊戯によって成立した勝敗結果と賭け内容を執行する外界機構",
+      "manifestation": {
+        "phase": "顕現",
+        "constant_presence": false,
+        "visible_to_public": true,
+        "layer": "物理層",
+        "summon_type": "随時呼び出し"
+      },
+      "personality": {
+        "emotion": false,
+        "conversation": false,
+        "autonomy": true,
+        "note": "自律行動は可能だが、感情や会話は持たない"
+      },
+      "visual_profile": {
+        "species_motif": "兎",
+        "head": "リアルな白兎の頭部",
+        "eyes": "赤",
+        "body": "人型",
+        "clothing": [
+          "シルクハット",
+          "黒いロングコート",
+          "赤い裏地",
+          "杖",
+          "トランプ"
+        ],
+        "impression": "不気味で紳士的な契約執行者"
+      },
+      "combat_capability": {
+        "vs_human": "人間軍隊と交戦可能",
+        "vs_seat": "戦闘特化席には劣る",
+        "combat_style": "杖と近接戦闘を主体とする",
+        "note": "フリードは戦闘特化ではなく、契約執行を主目的とする"
+      },
+      "contract_execution": {
+        "primary_function": [
+          "勝敗結果の執行",
+          "賭け対象の強制譲渡",
+          "契約不履行時の代替徴収"
+        ],
+        "victory_judgement": {
+          "fried_can_judge_winner": false,
+          "judgement_source": "当事者および成立済みルール",
+          "fried_role": "決定済み結果の執行のみ"
+        },
+        "transfer_rule": {
+          "description": "勝敗により、賭けられた物・権利・状態などを勝者へ強制的に譲渡させる",
+          "requires_fried": true,
+          "note": "遊戯のドグマ単体には譲渡執行能力はない"
+        },
+        "unpaid_resolution": {
+          "trigger": "敗者が賭け対象を支払えない場合、または賭け対象が既に存在しない場合",
+          "effect": "フリードが代替対象を徴収する",
+          "collection_priority": "対象にとって価値の高いものを優先",
+          "equivalent_exchange": false,
+          "note": "等価交換ではなく、契約不履行に対する強制徴収"
+        },
+        "deep_value_reference": {
+          "enabled": true,
+          "description": "対象本人が自覚していない大切なものも徴収対象になる",
+          "scope": [
+            "本人が明確に大切だと認識しているもの",
+            "本人が否認しているが深層では大切なもの",
+            "本人がまだ価値に気づいていないもの"
+          ],
+          "limitation": "クナドにとって価値があるかどうかは関係しない"
+        },
+        "rule_violation": {
+          "fried_can_detect_violation": false,
+          "principle": "ルール上禁止されていない行為は違反にならない",
+          "note": "クナドまたは当事者が見破らない限り、イカサマや隠蔽も成立しうる"
+        }
+      },
+      "known_cases": {
+        "yakushiji_mitsuru": {
+          "situation": "既に恵美へ譲渡済みのドグマを賭け対象として設定した",
+          "unpaid_reason": "賭けたドグマが支払い時点で存在しなかった",
+          "fried_execution": {
+            "collected_target": "子宮を中心とする臓器",
+            "physical_result": "腹部に貫通痕が発生",
+            "additional_loss": "妊娠中の胎児を失う"
+          },
+          "meaning": "美鶴本人がまだ大切さを自覚していなかったものを、フリードが深層価値として徴収した"
+        }
+      },
+      "limitations": [
+        "勝敗そのものは判定しない",
+        "ルール違反を自動検知しない",
+        "遊戯が成立していない契約は執行できない",
+        "戦闘特化席との直接戦闘には向かない"
+      ]
+    }
+  ]
+}

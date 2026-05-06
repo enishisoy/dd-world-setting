@@ -1,0 +1,152 @@
+{
+  "special_rules": {
+    "dogma_structure_rules": {
+      "dogma_is_core_structure": {
+        "description": "ドグマは単なる能力ではなく、人間基盤を構成する存在構造である"
+      },
+      "dogma_removal": {
+        "default_result": "死亡",
+        "description": "通常のイドはドグマを剥離されると存在構造が崩壊し死亡する"
+      },
+      "safe_transfer_exception": {
+        "required_factor": "5_継承",
+        "description": "継承因子を含む場合、安全なドグマ移植・譲渡が可能",
+        "known_users": [
+          "薬師寺美鶴",
+          "ローランド"
+        ],
+        "note": "クナドはこの原理を理解していなかった"
+      }
+    },
+    "game_loss_rules": {
+      "kunad_game_loss": {
+        "description": "遊戯敗北時、クナド内部の集合意識から魂が一つ消滅する",
+        "additional_effect": "ドグマ譲渡が発生する場合がある"
+      }
+    },
+    "factor_compatibility_rules": {
+      "description": "因子同士には親和・緊張・阻害・矛盾などの相性が存在する",
+      "dangerous_factors": [
+        "8_否定",
+        "9_臨界"
+      ],
+      "paradox_pairs": [
+        [
+          "2_境界",
+          "8_否定"
+        ],
+        [
+          "7_跳躍",
+          "9_臨界"
+        ],
+        [
+          "8_否定",
+          "9_臨界"
+        ]
+      ],
+      "note": "相性の悪い因子組は世界との整合性を崩しやすい"
+    },
+    "otherworld_rules": {
+      "otherworld_definition": {
+        "description": "異界は別空間ではなく、外界情報によって世界が変質した履歴である"
+      },
+      "persistence": {
+        "description": "異界は時間経過によって薄まるが、完全には消えない"
+      },
+      "diffusion": {
+        "method": "時間経過のみ"
+      },
+      "world_density": {
+        "description": "外界情報による世界への負荷量",
+        "increase_conditions": [
+          "席の存在",
+          "席の活動",
+          "ドグマ使用",
+          "席同士の戦闘",
+          "外界接触",
+          "異界滞在"
+        ]
+      },
+      "seat_effect": {
+        "description": "席は外界の意思を内包した器であり、存在するだけで異界濃度を上昇させる"
+      },
+      "combat_distortion": {
+        "description": "席同士の戦闘は異界化を加速させる",
+        "note": "現象が現実離れしているほど異界濃度は高くなる"
+      },
+      "human_effects": {
+        "low_level": [
+          "気分不良",
+          "違和感"
+        ],
+        "high_level": [
+          "イド化しやすくなる"
+        ],
+        "analogy": "禁足地・心霊スポットに近い"
+      }
+    },
+    "world_rejection_rules": {
+      "world_correction_force": {
+        "aliases": [
+          "拒絶圧"
+        ],
+        "description": "世界が現実整合性を維持しようとする修正圧"
+      },
+      "overload_process": {
+        "sequence": [
+          "異界濃度上昇",
+          "拒絶圧上昇",
+          "世界許容量超過",
+          "ログデリート"
+        ]
+      },
+      "log_delete": {
+        "description": "世界が保持不能な現象をログごと切除する現象",
+        "result": "存在していなかったことになる"
+      }
+    },
+    "ido_overload_rules": {
+      "ido_threshold": {
+        "description": "イドには異界負荷耐性限界が存在する"
+      },
+      "overload_result": {
+        "description": "限界を超えると暴走または消滅する"
+      },
+      "difference_from_log_delete": {
+        "description": "暴走はイド側の限界であり、ログデリートとは異なる"
+      },
+      "seat_burden": {
+        "description": "席は外界情報をイドへ流入させるため、異界負荷を急激に増大させる"
+      },
+      "special_case": {
+        "yuki_saya": {
+          "description": "極めて高い耐性を持ち、暴走しない"
+        }
+      }
+    },
+    "outer_world_contact_rules": {
+      "trigger": {
+        "description": "複数の究極感情エネルギーと外界の意思が天文学的確率で反応することで発生"
+      },
+      "rarity": "極めて稀",
+      "general_result": [
+        "精神崩壊",
+        "ログ消滅",
+        "肉体崩壊"
+      ],
+      "kunad_case": {
+        "description": "クナドは想いの強さによって外界接触を乗り越えた唯一例",
+        "post_contact_result": [
+          "戦友との存在統合",
+          "複数意識混在",
+          "自我消失",
+          "目的のみ残存"
+        ]
+      },
+      "misinterpretation": {
+        "description": "外界は応答しないが、クナドは『繋ぐべき』と誤訳した",
+        "core_error": "意味のないものに意味を与えた"
+      }
+    }
+  }
+}
