@@ -120,12 +120,6 @@
         "description": "対象に侵入・依存することで成立する席の構造分類。",
         "reference": "character_logs / seat_logs"
       },
-      "equipment_mechanism": {
-        "label": "装着機構",
-        "type": "mechanism_subtype",
-        "description": "装備・装着として宿主に適用される席の構造分類。",
-        "reference": "character_logs / seat_logs"
-      },
       "unmanaged_seat": {
         "label": "未管理席",
         "type": "system_state",
