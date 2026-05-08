@@ -1,0 +1,164 @@
+{
+  "character_key": "MIROKU",
+  "display_name": "ミロク",
+  "canonical_status": "prelock_structured",
+  "classification": "異度（IDO）／外界接触例外（三例）",
+
+  "authority": {
+    "status": "character_profile",
+    "conforms_to": [
+      "WORLD_BUNDLE_2026-01_LOCKED_v1.0.1",
+      "WORLD_LOG v1.2",
+      "WORLD_RULES v1.3",
+      "DD_STORY_CODE v1.1"
+    ],
+    "rule": "本ファイルはミロク本人の識別情報・人物核・性格・生活・主要関係性のみを記述する。教義、席、特殊ルール、物語イベントの詳細は別ファイルで管理する。"
+  },
+
+  "identity": {
+    "name": "ミロク",
+    "name_status": "本名不明（本人も忘却）",
+    "name_origin": "弥勒思想に由来する通称。救済者ではなく、未来が確定しない存在であることへの皮肉。",
+    "sex": "男性",
+    "age_appearance": "30代後半〜40代前半",
+    "era": "現代",
+    "public_status": "一般社会に擬態",
+    "ido_self_recognition": true,
+    "self_definition": "自我は保持しているが、目的を持たない存在。"
+  },
+
+  "appearance": {
+    "style": [
+      "黒髪",
+      "癖っ毛",
+      "軽装",
+      "革ジャン",
+      "丸い濃色サングラス"
+    ],
+    "demeanor": [
+      "風来坊のような佇まい",
+      "剽軽",
+      "軽口",
+      "常に余裕があるように振る舞う"
+    ],
+    "visual_reference": "忍野メメ系"
+  },
+
+  "core_profile": {
+    "core_motive": "観測",
+    "core_fear": "なし（自己申告）",
+    "core_loss": "目的",
+    "loss_statement": "クナドが目的のみを残したのに対し、ミロクは目的を失ったまま自我を保っている。",
+    "existential_position": "世界に有害である可能性を理解しているが、価値判断を行わない。",
+    "worldview": "未来は決まっていない方が面白い。ただしそれは宇宙規模での話であり、近未来の多くはほぼ固定された確率として見える。"
+  },
+
+  "personality": {
+    "surface_traits": [
+      "剽軽",
+      "軽口",
+      "知識欲が強い",
+      "退屈を嫌う",
+      "観測者志向"
+    ],
+    "emotional_state": "無動",
+    "death_cause_response": "死因を視認しても感情は動かない。",
+    "self_recognition_limit": "自分を定義・評価することはできない。自我の認識は危険域に接近するため回避している。",
+    "social_behavior": {
+      "interaction_style": "面白い人間には自分から話しかける",
+      "humor_response": "普通に笑う"
+    }
+  },
+
+  "daily_life": {
+    "occupation": "クナド勢運営のバーのマスター",
+    "day_cycle": {
+      "daytime": "睡眠",
+      "nighttime": "バー営業"
+    },
+    "off_day_behavior": [
+      "日中を出歩く",
+      "人間観察",
+      "クナド勢メンバーとの雑談"
+    ]
+  },
+
+  "preferences": {
+    "likes": [
+      "安酒",
+      "ナッツ",
+      "ジャンクフード"
+    ],
+    "dislikes": [
+      "手の込んだ家庭料理"
+    ]
+  },
+
+  "sensory_management": {
+    "sunglasses_usage": {
+      "primary_reason": "通行人の死因視認を防ぐため",
+      "secondary_reason": "表情隠し"
+    }
+  },
+
+  "outer_world_contact_summary": {
+    "status": "接触済み",
+    "timing": "第一章直前（数年前）",
+    "circumstance": "単独接触",
+    "result": [
+      "精神崩壊なし",
+      "情報過多状態の持続",
+      "所有権不明の記憶断片発生"
+    ],
+    "exception_trio_member": true,
+    "exception_trio": [
+      "クナド",
+      "ミロク",
+      "八雲智美"
+    ]
+  },
+
+  "relationships": {
+    "kunad": {
+      "address": "ボス",
+      "relation": "協力者",
+      "kunad_view": "同志",
+      "note": "境遇が近く、面白そうなことが多そうだから協力している。上下関係は形式的。"
+    },
+
+    "yagumo_emi": {
+      "relation": "宣告対象／観測対象／例外トリガー",
+      "human_recognition": true,
+      "trigger_phrase": "未来は決まっていない方が面白い",
+      "note": "恵美の発話により所有権不明ログ断片を想起する。"
+    },
+
+    "yuki_saya": {
+      "relation": "未来観測による間接接触者",
+      "note": "沙耶の未来観測ではミロク本人は観測不能。ただし恵美起点で観測不能地点を特定する流れに関与する。"
+    }
+  },
+
+  "core_statement": {
+    "quote": "未来は決まっていない。だがそれは宇宙規模での話だ。"
+  },
+
+  "file_scope_note": {
+    "included": [
+      "人物識別情報",
+      "外見",
+      "性格",
+      "生活",
+      "人物核",
+      "外界接触概要",
+      "主要関係性"
+    ],
+    "excluded": [
+      "教義『宣告』詳細",
+      "席 S-13『シュヴァルツァ』詳細",
+      "第四章イベント詳細",
+      "無観測消滅ルール詳細",
+      "PATCH履歴"
+    ]
+  }
+}

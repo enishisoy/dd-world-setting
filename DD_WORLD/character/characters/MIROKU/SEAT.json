@@ -1,0 +1,150 @@
+{
+  "seat_key": "MIROKU_SEAT",
+  "holder": "MIROKU",
+  "seat_id": "S-13",
+  "seat_name": "シュヴァルツァ",
+  "canonical_status": "prelock_structured",
+
+  "authority": {
+    "status": "seat_profile",
+    "conforms_to": [
+      "WORLD_BUNDLE_2026-01_LOCKED_v1.0.1",
+      "WORLD_LOG v1.2",
+      "WORLD_RULES v1.3",
+      "DD_STORY_CODE v1.1"
+    ],
+    "rule": "本ファイルはS-13『シュヴァルツァ』の顕現仕様・条件機構・因果固定・解除処理のみを記述する。ミロク本人の人物情報、D-13『宣告』単体の死因視認、第四章イベント詳細は別ファイルで管理する。"
+  },
+
+  "definition": {
+    "formal_name": "外界機構",
+    "in_text_default": "席",
+    "ruby": "アウターマキナ",
+    "classification": [
+      "顕現式概念機構",
+      "観測補助型",
+      "因果固定補助型"
+    ],
+    "existence_style": "顕現式",
+    "current_phase": "顕現",
+    "resident_layer": "物理層",
+    "general_visibility": "可（顕現時のみ）"
+  },
+
+  "personality_profile": {
+    "emotion_density": "薄い",
+    "communication": "可",
+    "conversation_note": "顕現式だが会話可能な例外。",
+    "autonomy": "限定的",
+    "autonomy_note": "特に自律して動くことはなく、ミロクの指示を受けて概念機構として作動する。"
+  },
+
+  "manifestation": {
+    "form": "黒いフードを被った少女型",
+    "visual_traits": [
+      "黒い靄を纏う",
+      "黒いフード",
+      "輪郭不定",
+      "黒い包帯で肌を隠す",
+      "目のみ発光",
+      "服はボロく靄のように崩れている"
+    ],
+    "motif": "赤ずきん",
+    "height_reference": "約140cm相当"
+  },
+
+  "connection_to_dogma": {
+    "doctrine_id": "D-13",
+    "doctrine_name": "宣告",
+    "dogma_side": "対象が死ぬ瞬間を視る",
+    "seat_side": "視認された死の瞬間を12時間後に固定する",
+    "note": "D-13単体では死を確定できない。S-13が顕現し条件を満たした場合のみ、宣告シュヴァルツァとして因果固定が成立する。"
+  },
+
+  "ability": {
+    "name": "宣告シュヴァルツァ",
+    "type": "条件成立型 因果固定",
+    "summary": "D-13で視認された死の瞬間を、対象の12時間後の結果として固定する。",
+    "effect": "対象は宣告された死因へ向かう因果に接続される。",
+    "time_fixation": "12時間後",
+    "time_note": "12時間は慈悲や猶予ではなく、S-13側の条件仕様。"
+  },
+
+  "activation_conditions": {
+    "required_steps": [
+      "S-13が顕現する",
+      "S-13が対象を指差す",
+      "ミロクが対象へ宣告を発話する",
+      "対象がS-13に指差されている状態でミロクの宣告を聞く"
+    ],
+    "target_awareness_required": true,
+    "language_note": "対象はミロクの宣告を聞く必要がある。",
+    "misfire_prevention": "ミロクが死因を視ただけでは発動しない。"
+  },
+
+  "release_rule": {
+    "release_actor": "ミロクの指示を受けたS-13",
+    "release_conditions": [
+      "ミロクの死亡",
+      "ミロクによる任意解除"
+    ],
+    "release_type": "因果固定の解除",
+    "post_release_effect": {
+      "description": "一度固定された運命は完全には消えず、対象への因果構造が恒常的に歪む。",
+      "result": [
+        "今は死なないが、次の瞬間に死ぬ可能性が残る",
+        "別形態の死の分岐が高確率で継続する",
+        "安全になるのではなく、確定死から不安定な未来へ移行する"
+      ],
+      "note": "解除は救済ではない。"
+    }
+  },
+
+  "limitations": {
+    "cannot_do": [
+      "D-13なしに死を固定する",
+      "ミロクの発話なしに宣告を成立させる",
+      "対象の認識なしに宣告を成立させる",
+      "任意に新しい死因を作る",
+      "対象を即死させる",
+      "自律的に無差別発動する"
+    ],
+    "blind_targets": [
+      "クナド",
+      "八雲智美",
+      "ミロク自身"
+    ],
+    "blind_target_note": "D-13で死の瞬間を視認できない対象には、S-13による宣告固定も成立しない。"
+  },
+
+  "invalid_interpretations": [
+    "S-13単体で対象を殺せる",
+    "S-13が自律して無差別に死を固定する",
+    "ミロクが視ただけで自動発動する",
+    "対象が聞いていなくても成立する",
+    "宣告解除で対象が安全になる",
+    "12時間は慈悲による猶予である"
+  ],
+
+  "file_scope_note": {
+    "included": [
+      "S-13の基本情報",
+      "顕現仕様",
+      "会話可能性",
+      "宣告シュヴァルツァ",
+      "指差し条件",
+      "12時間固定",
+      "解除条件",
+      "解除後の因果歪み",
+      "禁止解釈"
+    ],
+    "excluded": [
+      "ミロク本人の生活・性格",
+      "D-13単体の死因視認",
+      "第四章イベント詳細",
+      "恵美との会話全文",
+      "クナドとの最終会話",
+      "退場プロトコル"
+    ]
+  }
+}

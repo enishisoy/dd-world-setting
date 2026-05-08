@@ -1,0 +1,180 @@
+{
+  "special_rules_key": "MIROKU_SPECIAL_RULES",
+  "holder": "MIROKU",
+  "canonical_status": "prelock_structured",
+
+  "authority": {
+    "status": "special_rules_profile",
+    "conforms_to": [
+      "WORLD_BUNDLE_2026-01_LOCKED_v1.0.1",
+      "WORLD_LOG v1.2",
+      "WORLD_RULES v1.3",
+      "DD_STORY_CODE v1.1"
+    ],
+    "rule": "本ファイルはミロクに関する横断的な例外・観測不能・外界接触・因果歪み・無観測消滅など、複数ファイルにまたがる特殊運用ルールのみを記述する。"
+  },
+
+  "outer_world_exception": {
+    "exception_trio_member": true,
+    "exception_trio": [
+      "クナド",
+      "ミロク",
+      "八雲智美"
+    ],
+    "miroku_case": {
+      "contact_timing": "第一章直前（数年前）",
+      "contact_type": "単独接触",
+      "result": [
+        "精神崩壊しない",
+        "暴走しない",
+        "目的を喪失する",
+        "自我のみが残存する",
+        "所有権不明の記憶ログ断片を保持する"
+      ],
+      "contrast_to_kunad": "クナドは目的のみが残り、ミロクは目的を失って自我のみが残る。",
+      "contrast_to_tomomi": "八雲智美は外界に適合し、外界に隠匿された観測不能存在となる。"
+    }
+  },
+
+  "future_observation_exception": {
+    "rule": "ミロクは未来観測から部分的に逸脱する。",
+    "blind_from_future_doctrine": true,
+    "affected_observers": [
+      "結城沙耶"
+    ],
+    "blind_targets_group": [
+      "クナド",
+      "ミロク",
+      "八雲智美"
+    ],
+    "story_usage": "沙耶はミロク本人を直接観測できないが、恵美を起点に『探し出せない場所』を特定することで間接的に到達する。",
+    "misread_prevention": "未来観測不能は完全不可視ではなく、直接観測できないという意味。周辺条件から間接特定は可能。"
+  },
+
+  "self_recognition_hazard": {
+    "rule": "ミロクは自我を保持しているが、自我を知覚・定義し続けることは危険域に接近する。",
+    "reason": "外界情報への接触により、自己観測が情報過多・消滅リスクへ接続されるため。",
+    "effects": [
+      "自己定義の拒否",
+      "善悪評価の自己適用不能",
+      "優しい／残酷といった自己判定の不能"
+    ],
+    "story_result": "第四章終盤、自我を知覚できたことをクナドへ報告した後、無観測消滅へ向かう。"
+  },
+
+  "death_cause_visibility_control": {
+    "rule": "ミロクは視界に入った人間全ての死ぬ瞬間を見る。",
+    "blocking_method": "サングラス",
+    "blocking_effect": "サングラス越しでは死因視認が発生しない。",
+    "daily_life_reason": [
+      "通行人の死因を無闇に見ないため",
+      "日常生活における視認負荷を避けるため",
+      "表情を隠すため"
+    ],
+    "misread_prevention": "サングラスは単なるファッションではなく、死因視認を抑制する生活用安全装置である。"
+  },
+
+  "doctrine_and_seat_boundary": {
+    "rule": "D-13とS-13の責任分界を混同しない。",
+    "dogma_side": {
+      "id": "D-13",
+      "name": "宣告",
+      "scope": "対象が死ぬ瞬間を視るのみ"
+    },
+    "seat_side": {
+      "id": "S-13",
+      "name": "シュヴァルツァ",
+      "scope": "視認された死の瞬間を12時間後に固定する"
+    },
+    "activation_bridge": [
+      "S-13が顕現する",
+      "S-13が対象を指差す",
+      "ミロクが宣告を発話する",
+      "対象が指差しと宣告を認識する"
+    ],
+    "misread_prevention": "D-13単体では死を確定できない。S-13単体でもD-13なしに死を作れない。"
+  },
+
+  "post_release_causality_distortion": {
+    "rule": "宣告解除は救済ではない。",
+    "release_actor": "ミロクの指示を受けたS-13",
+    "release_conditions": [
+      "ミロクの死亡",
+      "ミロクによる任意解除"
+    ],
+    "aftereffect": [
+      "確定された死因は完全消滅しない",
+      "対象への因果構造が恒常的に歪む",
+      "今は死なないが次の瞬間に死ぬ可能性が残る",
+      "別形態の死の分岐が高確率で継続する"
+    ],
+    "story_usage": "恵美は宣告解除後も安全にならず、安全ではない未来へ移行する。"
+  },
+
+  "unobserved_disappearance": {
+    "rule": "ミロクの最終退場は無観測消滅として扱う。",
+    "sequence": [
+      "ビルから飛び降り、恵美の前から消える",
+      "クナドと最終接触する",
+      "誰もいない場所へ移動する",
+      "無観測で消滅する"
+    ],
+    "observation": "なし",
+    "result": "消滅により退場",
+    "world_rule_reference": "observation_rule.unobserved_exit",
+    "misread_prevention": [
+      "ビルから飛び降りた時点で死亡したわけではない",
+      "消滅は恵美にもクナドにも観測されない",
+      "死亡シーンは存在しない"
+    ]
+  },
+
+  "intentional_unknowns": {
+    "rule": "以下は未確定として保持し、安易に確定しない。",
+    "unknown_items": [
+      {
+        "item": "所有権不明の記憶ログ断片の帰属先",
+        "reason": "確定するとミロクの自己同一性が固定されすぎるため"
+      },
+      {
+        "item": "宣告解除後に恵美へ訪れる具体的な死の形",
+        "reason": "安全ではない未来の余白として保持するため"
+      },
+      {
+        "item": "ミロク消滅時に発生しうる異界の歪み量",
+        "reason": "無観測消滅であり、観測されないため"
+      }
+    ]
+  },
+
+  "invalid_interpretations": [
+    "ミロクは全知である",
+    "ミロクは未来を完全支配している",
+    "ミロクは殺害能力者である",
+    "宣告解除は救済である",
+    "サングラスは単なるファッションである",
+    "ミロクの退場はビルからの飛び降りによる死亡である",
+    "S-13が自律的に人を殺す",
+    "D-13とS-13は同一能力である"
+  ],
+
+  "file_scope_note": {
+    "included": [
+      "外界接触例外",
+      "未来観測不能",
+      "自己認識危険性",
+      "サングラスによる死因視認制御",
+      "D-13とS-13の責任分界",
+      "宣告解除後の因果歪み",
+      "無観測消滅",
+      "意図的未確定"
+    ],
+    "excluded": [
+      "ミロク本人の生活・性格詳細",
+      "D-13単体のJSON仕様",
+      "S-13単体のJSON仕様",
+      "第四章イベント全文",
+      "PATCH履歴"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "dogma_key": "MIROKU_DOGMA",
+  "holder": "MIROKU",
+  "doctrine_id": "D-13",
+  "common_name": "宣告",
+  "formal_name": "撓界現象",
+  "canonical_status": "prelock_structured",
+
+  "authority": {
+    "status": "dogma_profile",
+    "conforms_to": [
+      "WORLD_BUNDLE_2026-01_LOCKED_v1.0.1",
+      "WORLD_LOG v1.2",
+      "WORLD_RULES v1.3",
+      "DD_STORY_CODE v1.1"
+    ],
+    "rule": "本ファイルはミロク本人の教義『宣告』の単体効果・視認条件・制約のみを記述する。S-13『シュヴァルツァ』による12時間固定、因果確定、宣告解除、顕現仕様はSEAT.jsonで管理する。"
+  },
+
+  "definition": {
+    "type": "死因視認型 撓界現象",
+    "summary": "対象が死ぬ瞬間を視認する教義。",
+    "effect": "対象の死因を視認する",
+    "not_causality_fixing": true,
+    "not_killing_ability": true,
+    "interpretation": "ミロク本人の教義は観測であり、単体では対象の死を固定・現実化しない。"
+  },
+
+  "base_effect": {
+    "name": "死因視認",
+    "description": "視界に入った人間が死ぬ瞬間を見る。",
+    "visible_content": "死亡の瞬間",
+    "clarity": "死ぬ瞬間そのものが見えるため、状況が曖昧で死因が判別しづらい場合がある。",
+    "emotional_response": "死因を視認してもミロク本人の感情は動かない。"
+  },
+
+  "activation_conditions": {
+    "visual_requirement": "対象がミロクの視界に入ること",
+    "target_scope": "視界に入った人間全て",
+    "intent_requirement": "不要",
+    "seat_requirement": "不要"
+  },
+
+  "limitations": {
+    "effect_limit": [
+      "死を見るだけ",
+      "運命干渉はできない",
+      "死亡時刻を固定しない",
+      "対象を殺害しない"
+    ],
+    "blind_targets": [
+      "クナド",
+      "八雲智美",
+      "ミロク自身"
+    ],
+    "blind_target_reason": "外界接触者は未来観測から部分的に逸脱しているため。",
+    "self_prediction": "不可"
+  },
+
+  "sensory_management": {
+    "sunglasses_blocking": {
+      "enabled": true,
+      "effect": "サングラス越しでは人の死因を視認しない。",
+      "purpose": [
+        "無闇に通行人の死因を見ないため",
+        "日常生活における視認負荷を避けるため"
+      ]
+    }
+  },
+
+  "seat_dependency": {
+    "required_seat": "S-13",
+    "seat_name": "シュヴァルツァ",
+    "note": "因果固定・12時間後の現実化・宣告解除は席側で管理される。"
+  },
+
+  "invalid_interpretations": [
+    "D-13単体で対象を殺せる",
+    "D-13単体で12時間後の死を固定する",
+    "D-13単体で因果を確定する",
+    "ミロクが未来を完全支配している",
+    "ミロクが全知である",
+    "死因視認が必ず明確な映像・説明として理解できる"
+  ],
+
+  "file_scope_note": {
+    "included": [
+      "教義『宣告』の単体効果",
+      "死因視認",
+      "視認条件",
+      "サングラスによる遮断",
+      "観測不能対象",
+      "S-13への依存関係",
+      "禁止解釈"
+    ],
+    "excluded": [
+      "S-13『シュヴァルツァ』による12時間固定",
+      "S-13の顕現・指差し条件",
+      "ミロクの宣告発話による効果発動",
+      "宣告解除",
+      "解除後の因果歪み",
+      "第四章イベント詳細",
+      "退場プロトコル"
+    ]
+  }
+}
