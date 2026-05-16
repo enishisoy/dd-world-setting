@@ -24,12 +24,16 @@ const FIXED_FILES = [
 
 async function fetchJsonFile(path) {
   const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${ROOT}/${path}`;
+
   const response = await fetch(url);
 
+  // =========================
+  // FETCH ERROR
+  // =========================
   if (!response.ok) {
     return {
       ok: false,
-      type: "FETCH_ERROR",
+      status_type: "FETCH_ERROR",
       status: response.status,
       statusText: response.statusText,
       url,
@@ -39,22 +43,27 @@ async function fetchJsonFile(path) {
 
   const text = await response.text();
 
-  // 空JSONファイルはエラー扱いにせず、未記入プレースホルダーとして扱う
+  // =========================
+  // EMPTY FILE
+  // =========================
   if (text.trim() === "") {
     return {
       ok: true,
-      type: "EMPTY_PLACEHOLDER",
-      empty: true,
-      data: {},
+      status_type: "EMPTY_FILE",
+      message: "JSON file is empty",
+      data: null,
       url,
       path
     };
   }
 
+  // =========================
+  // JSON PARSE
+  // =========================
   try {
     return {
       ok: true,
-      empty: false,
+      status_type: "VALID_JSON",
       data: JSON.parse(text),
       url,
       path
@@ -62,7 +71,7 @@ async function fetchJsonFile(path) {
   } catch (error) {
     return {
       ok: false,
-      type: "JSON_PARSE_ERROR",
+      status_type: "JSON_PARSE_ERROR",
       error: error.message,
       url,
       path,
@@ -73,7 +82,9 @@ async function fetchJsonFile(path) {
 }
 
 async function listJsonFiles(dir, diagnostics) {
-  const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${ROOT}/${dir}?ref=${BRANCH}`;
+  const apiUrl =
+    `https://api.github.com/repos/${OWNER}/${REPO}/contents/${ROOT}/${dir}?ref=${BRANCH}`;
+
   const response = await fetch(apiUrl);
 
   diagnostics.directory_checks.push({
@@ -99,6 +110,7 @@ async function listJsonFiles(dir, diagnostics) {
   }
 
   const items = await response.json();
+
   let results = [];
 
   for (const item of items) {
@@ -108,13 +120,22 @@ async function listJsonFiles(dir, diagnostics) {
       type: item.type
     });
 
+    // =========================
+    // JSON FILE
+    // =========================
     if (item.type === "file" && item.name.endsWith(".json")) {
       results.push(`${dir}/${item.name}`);
     }
 
+    // =========================
+    // CHILD DIRECTORY
+    // =========================
     if (item.type === "dir") {
       const childDir = `${dir}/${item.name}`;
-      const childFiles = await listJsonFiles(childDir, diagnostics);
+
+      const childFiles =
+        await listJsonFiles(childDir, diagnostics);
+
       results = results.concat(childFiles);
     }
   }
@@ -126,108 +147,186 @@ app.get("/", (req, res) => {
   res.json({
     ok: true,
     service: "DD_WORLD API",
-    endpoints: ["/health", "/world", "/debug"]
+    endpoints: [
+      "/health",
+      "/world",
+      "/debug"
+    ]
   });
 });
 
 app.get("/health", (req, res) => {
-  res.json({ ok: true });
+  res.json({
+    ok: true
+  });
 });
 
 app.get("/world", async (req, res) => {
   try {
+
     const diagnostics = {
       directory_checks: [],
       directory_errors: [],
       scanned_items: []
     };
 
+    // =========================
+    // FILE SCAN
+    // =========================
     const dynamicFiles = [
       ...(await listJsonFiles("character", diagnostics)),
       ...(await listJsonFiles("story", diagnostics))
     ];
 
-    const allFiles = [...new Set([...FIXED_FILES, ...dynamicFiles])];
+    const allFiles = [
+      ...new Set([
+        ...FIXED_FILES,
+        ...dynamicFiles
+      ])
+    ];
 
     const files = {};
+
     const errorFiles = [];
     const emptyFiles = [];
+    const validFiles = [];
 
+    // =========================
+    // FILE LOAD
+    // =========================
     for (const file of allFiles) {
+
       const result = await fetchJsonFile(file);
+
       files[file] = result;
 
+      // VALID JSON
+      if (
+        result.ok &&
+        result.status_type === "VALID_JSON"
+      ) {
+        validFiles.push(file);
+      }
+
+      // EMPTY FILE
+      if (
+        result.ok &&
+        result.status_type === "EMPTY_FILE"
+      ) {
+        emptyFiles.push(file);
+      }
+
+      // ERROR
       if (!result.ok) {
         errorFiles.push({
           path: file,
-          type: result.type,
-          error: result.error || result.statusText || result.status
-        });
-      }
-
-      if (result.empty) {
-        emptyFiles.push({
-          path: file,
-          type: result.type
+          type: result.status_type,
+          error:
+            result.error ||
+            result.statusText ||
+            result.status
         });
       }
     }
 
+    // =========================
+    // RESPONSE
+    // =========================
     res.json({
-      ok: errorFiles.length === 0 && diagnostics.directory_errors.length === 0,
-      source: `https://github.com/${OWNER}/${REPO}/tree/${BRANCH}/${ROOT}`,
+
+      ok:
+        errorFiles.length === 0 &&
+        diagnostics.directory_errors.length === 0,
+
+      service: "DD_WORLD API",
+
+      source:
+        `https://github.com/${OWNER}/${REPO}/tree/${BRANCH}/${ROOT}`,
+
       total_files: allFiles.length,
-      dynamic_files_count: dynamicFiles.length,
-      error_files_count: errorFiles.length,
+
+      valid_files_count: validFiles.length,
+
       empty_files_count: emptyFiles.length,
-      directory_errors_count: diagnostics.directory_errors.length,
-      dynamic_files: dynamicFiles,
-      error_files: errorFiles,
+
+      error_files_count: errorFiles.length,
+
+      directory_errors_count:
+        diagnostics.directory_errors.length,
+
+      valid_files: validFiles,
+
       empty_files: emptyFiles,
+
+      error_files: errorFiles,
+
       diagnostics,
+
       files
     });
+
   } catch (error) {
+
     res.status(500).json({
       ok: false,
-      type: "SERVER_ERROR",
+      status_type: "SERVER_ERROR",
       error: error.message,
       stack: error.stack
     });
+
   }
 });
 
 app.get("/debug", async (req, res) => {
   try {
+
     const diagnostics = {
       directory_checks: [],
       directory_errors: [],
       scanned_items: []
     };
 
-    const characterFiles = await listJsonFiles("character", diagnostics);
-    const storyFiles = await listJsonFiles("story", diagnostics);
+    const characterFiles =
+      await listJsonFiles("character", diagnostics);
+
+    const storyFiles =
+      await listJsonFiles("story", diagnostics);
 
     res.json({
-      ok: diagnostics.directory_errors.length === 0,
+      ok:
+        diagnostics.directory_errors.length === 0,
+
       root: ROOT,
+
       branch: BRANCH,
-      character_files_count: characterFiles.length,
-      story_files_count: storyFiles.length,
-      character_files: characterFiles,
-      story_files: storyFiles,
+
+      character_files_count:
+        characterFiles.length,
+
+      story_files_count:
+        storyFiles.length,
+
+      character_files,
+
+      story_files,
+
       diagnostics
     });
+
   } catch (error) {
+
     res.status(500).json({
       ok: false,
-      type: "DEBUG_SERVER_ERROR",
+      status_type: "DEBUG_SERVER_ERROR",
       error: error.message,
       stack: error.stack
     });
+
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`DD_WORLD API listening on port ${PORT}`);
+  console.log(
+    `DD_WORLD API listening on port ${PORT}`
+  );
 });
