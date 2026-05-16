@@ -39,11 +39,13 @@ async function fetchJsonFile(path) {
 
   const text = await response.text();
 
+  // 空JSONファイルはエラー扱いにせず、未記入プレースホルダーとして扱う
   if (text.trim() === "") {
     return {
-      ok: false,
-      type: "EMPTY_JSON",
-      error: "Empty JSON file",
+      ok: true,
+      type: "EMPTY_PLACEHOLDER",
+      empty: true,
+      data: {},
       url,
       path
     };
@@ -52,6 +54,7 @@ async function fetchJsonFile(path) {
   try {
     return {
       ok: true,
+      empty: false,
       data: JSON.parse(text),
       url,
       path
@@ -148,6 +151,7 @@ app.get("/world", async (req, res) => {
 
     const files = {};
     const errorFiles = [];
+    const emptyFiles = [];
 
     for (const file of allFiles) {
       const result = await fetchJsonFile(file);
@@ -160,6 +164,13 @@ app.get("/world", async (req, res) => {
           error: result.error || result.statusText || result.status
         });
       }
+
+      if (result.empty) {
+        emptyFiles.push({
+          path: file,
+          type: result.type
+        });
+      }
     }
 
     res.json({
@@ -168,9 +179,11 @@ app.get("/world", async (req, res) => {
       total_files: allFiles.length,
       dynamic_files_count: dynamicFiles.length,
       error_files_count: errorFiles.length,
+      empty_files_count: emptyFiles.length,
       directory_errors_count: diagnostics.directory_errors.length,
       dynamic_files: dynamicFiles,
       error_files: errorFiles,
+      empty_files: emptyFiles,
       diagnostics,
       files
     });
