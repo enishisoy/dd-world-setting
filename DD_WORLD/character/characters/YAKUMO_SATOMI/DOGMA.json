@@ -1,0 +1,308 @@
+{
+  "DOGMA": {
+    "dogma_id": "D-3",
+    "dogma_name": "創造",
+    "formal_name": "構造再構築型撓界現象",
+    "user": "YAKUMO_SATOMI",
+    "canonical_status": "finalized_candidate",
+    "file_role": "2_DOGMA.json",
+
+    "classification": {
+      "system": "structure_reconstruction",
+      "combat_type": "phenomenon_creation",
+      "risk_rank": "EXCEPTIONAL",
+      "seat_dependency": "S-3_ALMA"
+    },
+
+    "core_definition": {
+      "summary": "理解済み構造を現実へ再構築・投影・複製する教義。",
+      "essence": [
+        "無からの万能創造ではない",
+        "理解済み構造の再構築",
+        "構造翻訳",
+        "現実投影"
+      ],
+      "principle": "智美が完全理解した構造を、外界由来エネルギーを利用して現実へ再構築する。"
+    },
+
+    "activation_conditions": {
+      "required": [
+        "対象構造の完全理解",
+        "エネルギー供給",
+        "構造維持可能状態"
+      ],
+
+      "understanding_rule": {
+        "definition": "曖昧理解・印象・推測では発動できない。",
+        "minimum_requirement": "構造を完全理解していること。",
+        "failure_results": [
+          "欠陥構造",
+          "不完全生成",
+          "崩壊"
+        ],
+
+        "canonical_case": [
+          "初期複製体"
+        ]
+      }
+    },
+
+    "creation_scope": {
+
+      "possible": [
+        "無機物生成",
+        "生命体複製",
+        "現象生成",
+        "局所環境改変",
+        "鉱物生成",
+        "樹木生成",
+        "巨大構造物生成",
+        "治療",
+        "肉体修復",
+        "ログ参照型複製"
+      ],
+
+      "examples": [
+        "巨大樹木による建築物崩壊",
+        "希少鉱物による広域制圧",
+        "巨大剣による直線破壊",
+        "対象肉体の再構築",
+        "自身の複製"
+      ],
+
+      "high_output_examples": [
+        "理論上、恒星規模エネルギー体の生成"
+      ],
+
+      "limitations": [
+        "未知構造は創造不可",
+        "観測不能領域は再現不可",
+        "妄想科学は不可",
+        "世界法則変更不可",
+        "未来生成不可",
+        "席生成不可",
+        "因子生成不可",
+        "魂生成不可"
+      ]
+    },
+
+    "understanding_limit": {
+
+      "rule": "理解していないものは創造できない。",
+
+      "cannot_understand": [
+        "魂",
+        "未来",
+        "席構造",
+        "因子本質",
+        "外界そのもの"
+      ],
+
+      "seat_exception": {
+        "description": "席は構造が複雑すぎるため、智美でも理解できない。",
+        "special_case": "クナドのみが誤訳状態で席を成立させた例外。"
+      }
+    },
+
+    "energy_system": {
+
+      "base_cost": "生命エネルギー",
+
+      "without_alma": {
+        "status": "extremely_unstable",
+
+        "effects": [
+          "創造維持不可",
+          "短時間で崩壊",
+          "副生体維持不可"
+        ],
+
+        "survival_time": "万全状態でも長時間維持不可",
+
+        "canonical_case": [
+          "第一章：自身複製後に絶命"
+        ]
+      },
+
+      "with_alma": {
+        "status": "stable",
+
+        "source": "外界由来エネルギー",
+
+        "effects": [
+          "存在維持",
+          "高出力創造",
+          "長期活動",
+          "超常規模現象維持"
+        ]
+      }
+    },
+
+    "replication": {
+
+      "type": "log_reference_reconstruction",
+
+      "definition": "世界に残留したログを参照し、対象を完全再構築する。",
+
+      "requirements": [
+        "完全ログ",
+        "構造理解",
+        "十分なエネルギー"
+      ],
+
+      "results": {
+        "complete_log": "100%再現可能",
+        "partial_log": [
+          "構造崩壊",
+          "欠陥発生",
+          "不安定化"
+        ]
+      },
+
+      "observer_perception": "第三者からは死者蘇生に見える。",
+
+      "identity_rule": "完全再現された対象は、構造上元個体と同一として扱われる。",
+
+      "instant_death_limit": {
+        "rule": "即死時は複製不可。",
+        "reason": "ログ処理および構造再構築猶予が存在しないため。"
+      }
+    },
+
+    "soul_and_log_definition": {
+
+      "soul": {
+        "definition": "感情・精神活動によって世界へ放出された副次情報。",
+        "properties": [
+          "人格核ではない",
+          "観測困難",
+          "物理現象から遠い",
+          "感情残滓に近い"
+        ]
+      },
+
+      "log": {
+        "definition": "世界に残された存在構造記録。",
+        "properties": [
+          "人格情報を含む",
+          "記憶を含む",
+          "因果履歴を含む",
+          "ソースコードおよび実績履歴"
+        ]
+      },
+
+      "important_rule": "魂とログは同一ではない。"
+    },
+
+    "world_interference": {
+
+      "civilization_scale": {
+        "possible": true,
+
+        "examples": [
+          "市場破壊",
+          "資源価値崩壊",
+          "国家規模干渉"
+        ],
+
+        "note": "理論上は可能だが、智美本人は面白半分で能力を使用しない。"
+      },
+
+      "world_rewrite_limit": {
+        "impossible": [
+          "世界法則変更",
+          "死の削除",
+          "未来固定",
+          "完全過去改変",
+          "席生成",
+          "新外界生成"
+        ]
+      }
+    },
+
+    "existence_structure": {
+
+      "description": "智美自身が外界露出状態で存在している。",
+
+      "important_difference": {
+        "normal_creation": "世界へ定着可能",
+        "satomi_herself": "常時維持エネルギーが必要"
+      },
+
+      "world_effect": {
+        "description": "智美が存在するだけで周囲世界は異界化を開始する。",
+
+        "reason": "智美自身が外界構造を露出した存在であるため。"
+      },
+
+      "outer_world_relation": {
+        "description": "智美は外界に適応可能な例外個体。",
+
+        "properties": [
+          "世界観測可能",
+          "ログ閲覧可能",
+          "未来観測不可"
+        ],
+
+        "interpretation_rule": "外界は観測者によって翻訳される。智美は外界を知識閲覧空間として解釈した。"
+      }
+    },
+
+    "generated_structure_rule": {
+
+      "settlement_rule": {
+        "description": "生成物は世界へ定着し、通常物質として存在可能。",
+
+        "examples": [
+          "金",
+          "建築物",
+          "治療済み肉体"
+        ]
+      },
+
+      "hidden_property": {
+        "description": "生成物には創造ログが残留する。",
+
+        "detection": [
+          "D-4 天秤"
+        ]
+      },
+
+      "destruction_interaction": {
+        "description": "D-9破壊は創造由来構造を破壊可能。"
+      }
+    },
+
+    "practical_behavior_limit": {
+
+      "personality_based_limit": [
+        "世界支配欲がない",
+        "恵美を優先する",
+        "不必要な大規模介入を避ける",
+        "存在そのものが危険であると理解している"
+      ]
+    },
+
+    "prohibited_interpretations": [
+      "万能創造",
+      "無限複製",
+      "魂生成",
+      "死の完全否定",
+      "未来改変",
+      "世界法則改変",
+      "席生成",
+      "智美は神である",
+      "複製は劣化コピーである"
+    ],
+
+    "construction_status": {
+      "contradiction_check": {
+        "world_bundle": "NONE",
+        "world_rules": "NONE",
+        "story_code": "NONE"
+      },
+
+      "safe_to_lock": true
+    }
+  }
+}

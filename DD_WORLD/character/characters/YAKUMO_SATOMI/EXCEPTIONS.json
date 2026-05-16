@@ -1,0 +1,265 @@
+{
+  "EXCEPTIONS": {
+    "character_key": "YAKUMO_SATOMI",
+    "file_role": "4_EXCEPTIONS.json",
+    "canonical_status": "finalized_candidate",
+
+    "core_exception_definition": {
+      "summary": "八雲智美は、外界露出状態となった構造連続個体である。",
+      "important_rule": [
+        "世界原理そのものは超越していない",
+        "終端へ向かう存在である",
+        "死の完全否定ではない"
+      ]
+    },
+
+    "structural_continuity": {
+
+      "definition": "複製後も構造上同一人物として成立する例外構造。",
+
+      "identity_rule": {
+        "activation_point": "生成完了時点",
+
+        "world_side_processing": {
+          "description": "世界側は複製体を別個体として処理する。",
+
+          "reason": [
+            "生成ログ差分",
+            "存在履歴差分",
+            "複製記録"
+          ]
+        }
+      },
+
+      "duplicate_entity_rule": {
+        "description": "同一ログ存在は世界側で重複存在として扱われる。",
+
+        "important_note": [
+          "本作品ではタイムパラドックス型宇宙崩壊は発生しない",
+          "重大矛盾発生時は原因側がログデリートされる"
+        ]
+      },
+
+      "replication_policy": {
+        "default_behavior": "単独存在維持",
+
+        "reason": [
+          "精神衛生上の理由",
+          "複数自己存在の拒絶"
+        ]
+      },
+
+      "simultaneous_instances": {
+        "identity_result": "両方とも本人"
+      }
+    },
+
+    "death_and_memory": {
+
+      "previous_body_recognition": {
+        "type": "別個体死亡認識",
+
+        "description": "複製体は前個体の死を、自身とは別個体の死として認識する。"
+      },
+
+      "human_perception": {
+        "description": "第三者からは死者蘇生に見える。"
+      }
+    },
+
+    "outer_world_adaptation": {
+
+      "status": "exceptional_adaptation",
+
+      "adaptation_reason": {
+        "description": "最初の副生体がドグマ生成生命体だったため。",
+
+        "important_rule": [
+          "オリジナル智美では適応不可",
+          "副生体化後に適応成立"
+        ]
+      },
+
+      "outer_world_body": {
+        "status": "human_type",
+
+        "description": "外界内でも基本的人型構造を維持する。"
+      },
+
+      "time_sense": {
+        "type": "現実とほぼ同等"
+      },
+
+      "outer_world_behavior": {
+
+        "description": "智美は外界を知識閲覧空間として解釈した。",
+
+        "accessible_information": [
+          "世界ログ",
+          "存在記録",
+          "構造情報"
+        ],
+
+        "inaccessible_information": [
+          "未来"
+        ]
+      }
+    },
+
+    "world_distortion": {
+
+      "description": "智美の存在自体が異界化を引き起こす。",
+
+      "core_rule": {
+        "description": "智美は濃い色水の発生源に近い存在である。",
+
+        "result": [
+          "周囲世界の異界化",
+          "外界濃度上昇",
+          "現実定義変質"
+        ]
+      },
+
+      "controlability": {
+        "status": "uncontrollable",
+
+        "description": "智美自身でも異界化停止は不可能。"
+      },
+
+      "danger_level": {
+        "description": "通常の席戦闘による異界化より危険。"
+      },
+
+      "human_effects": {
+
+        "description": "外界適応できない人間は異界環境に耐えられない。",
+
+        "result_type": "individual_difference",
+
+        "possible_results": [
+          "適応失敗",
+          "精神崩壊",
+          "存在崩壊"
+        ]
+      }
+    },
+
+    "existence_maintenance_limit": {
+
+      "core_rule": {
+        "description": "智美はアルマなしでは存在維持できない。"
+      },
+
+      "alma_loss_sequence": {
+
+        "phase_1": "創造停止",
+        "phase_2": "存在維持崩壊",
+        "phase_3": "肉体崩壊",
+
+        "estimated_remaining_time": "約1分"
+      },
+
+      "pain_response": {
+        "status": "none",
+
+        "description": "崩壊時、智美は痛覚を感じない。"
+      },
+
+      "post_alma_replication": {
+
+        "status": "impossible",
+
+        "reason": [
+          "第五章時点の智美は構造が複雑化し過ぎている",
+          "アルマなしでは自己維持で限界",
+          "複製へ割くリソースが存在しない"
+        ],
+
+        "important_note": "何かへリソースを割いた瞬間、存在維持が破綻する。"
+      }
+    },
+
+    "unmanaged_seat_relation": {
+
+      "description": "智美は未管理席に近い危険性を持つ。",
+
+      "similarities": [
+        "常時世界干渉",
+        "異界化誘発",
+        "外界露出"
+      ],
+
+      "important_difference": [
+        "智美自身は人格・人間性を維持している"
+      ]
+    },
+
+    "humanity_residue": {
+
+      "core_rule": {
+        "description": "智美は最後まで人間性を喪失しない。"
+      },
+
+      "remaining_elements": [
+        "姉性",
+        "恵美への執着",
+        "日常願望",
+        "保護欲",
+        "羨望",
+        "愛情"
+      ],
+
+      "ethics_change": {
+        "description": "倫理観の一部希薄化は存在する。",
+
+        "examples": [
+          "障害排除思考",
+          "副生体化許容"
+        ]
+      },
+
+      "self_recognition": {
+        "description": "智美自身は生物学的には人間だと認識している。"
+      },
+
+      "monster_recognition": {
+        "status": "accepted",
+
+        "description": "自身が異常存在であることは理解し、割り切っている。"
+      }
+    },
+
+    "termination_condition": {
+
+      "fixed_end_rule": {
+        "description": "智美は必ず終端へ向かう存在である。"
+      },
+
+      "termination_triggers": [
+        "アルマ消失",
+        "維持崩壊",
+        "存在構造破綻"
+      ],
+
+      "prohibited_interpretations": [
+        "智美は無限存在",
+        "智美は神",
+        "智美は死を超越した",
+        "智美は完全生命",
+        "智美は永続可能"
+      ]
+    },
+
+    "construction_status": {
+      "contradiction_check": {
+        "world_bundle": "NONE",
+        "world_rules": "NONE",
+        "dogma_json": "NONE",
+        "seat_json": "NONE",
+        "story_code": "NONE"
+      },
+
+      "safe_to_lock": true
+    }
+  }
+}

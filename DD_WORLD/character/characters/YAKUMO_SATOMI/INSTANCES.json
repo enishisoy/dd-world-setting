@@ -1,0 +1,270 @@
+{
+  "INSTANCES": {
+    "character_key": "YAKUMO_SATOMI",
+    "file_role": "5_INSTANCES.json",
+    "canonical_status": "finalized_candidate",
+
+    "instance_management_policy": {
+      "purpose": [
+        "個体管理",
+        "時系列整合",
+        "人格差分管理",
+        "第五章参照事故防止"
+      ],
+
+      "important_rule": [
+        "全個体は『智美本人』である",
+        "ただし同一状態ではない",
+        "世界側では別存在として処理される"
+      ]
+    },
+
+    "instances": {
+
+      "SATOMI_A": {
+
+        "instance_id": "SATOMI_A",
+
+        "classification": {
+          "type": "original_human",
+          "status": "deceased"
+        },
+
+        "overview": {
+          "summary": "生前オリジナル八雲智美。",
+          "role": [
+            "人間時代の智美",
+            "火災事件被害者",
+            "創造発現元"
+          ]
+        },
+
+        "timeline": {
+
+          "life_stage": "生前",
+
+          "awakening_event": {
+            "description": "第一章火災内で瀕死状態となり、自力で創造を発現。"
+          },
+
+          "replication_event": {
+            "description": "意識消失直前、自身の複製体を生成。"
+          },
+
+          "death_event": {
+            "description": "複製生成後に死亡。",
+
+            "world_processing": "通常死亡"
+          }
+        },
+
+        "personality_profile": {
+
+          "humanity_level": "完全人間",
+
+          "traits": [
+            "優等生",
+            "社交的",
+            "穏やか",
+            "妹愛が強い"
+          ]
+        },
+
+        "outer_world_adaptation": {
+          "status": "不可"
+        },
+
+        "memory_transfer": {
+          "target": "SATOMI_B",
+          "transfer_rate": "完全"
+        }
+      },
+
+      "SATOMI_B": {
+
+        "instance_id": "SATOMI_B",
+
+        "classification": {
+          "type": "replicated_structural_continuation",
+          "status": "active_until_chapter5_end"
+        },
+
+        "overview": {
+          "summary": "SATOMI_A の構造継続個体。",
+          "important_rule": [
+            "世界側では別存在",
+            "本人認識としては智美継続"
+          ]
+        },
+
+        "generation": {
+
+          "created_from": "SATOMI_A",
+
+          "generation_timing": "第一章火災事件中",
+
+          "generation_state": "瀕死時生成"
+        },
+
+        "initial_defects": {
+
+          "core_defects": [
+            "臓器欠損",
+            "存在維持不安定",
+            "日々崩壊進行"
+          ],
+
+          "cause": [
+            "ドグマ生成生命",
+            "不完全初期構造"
+          ],
+
+          "result": [
+            "自然寿命不可",
+            "長期生存不能"
+          ]
+        },
+
+        "memory_inheritance": {
+
+          "inheritance_rate": "完全",
+
+          "important_rule": [
+            "記憶継承あり",
+            "人格継続あり"
+          ]
+        },
+
+        "self_recognition": {
+
+          "self_identity": "智美本人",
+
+          "recognition_of_A": [
+            "オリジナル",
+            "死んだ自分"
+          ]
+        },
+
+        "outer_world_phase": {
+
+          "adaptation_stage": "完全適応",
+
+          "adaptation_trigger": {
+            "description": "外界接触時に適応成立。"
+          },
+
+          "important_reason": [
+            "ドグマ生成生命だったため適応可能",
+            "オリジナルでは適応不可"
+          ]
+        },
+
+        "alma_connection": {
+
+          "seat": "S-3 アルマ",
+
+          "result": [
+            "存在維持安定",
+            "創造維持",
+            "長期活動可能化"
+          ]
+        },
+
+        "world_distortion": {
+
+          "description": "存在するだけで世界を異界化させる。",
+
+          "recognition": {
+            "self_awareness": true,
+
+            "conclusion": "恵美保護のため外界へ移動"
+          }
+        },
+
+        "personality_transition": {
+
+          "major_change_factors": [
+            "力の獲得",
+            "外界知識"
+          ],
+
+          "resulting_changes": [
+            "余裕増加",
+            "恐怖減少",
+            "排除選択許容"
+          ],
+
+          "important_rule": [
+            "別人格化ではない",
+            "本質的人間性は維持"
+          ]
+        },
+
+        "daily_life_desire": {
+
+          "remaining_desire": "非常に強い",
+
+          "greatest_happiness": [
+            "恵美との日常生活"
+          ]
+        },
+
+        "envy_record": {
+
+          "target": "恵美に抱かれたSATOMI_Aの死体",
+
+          "emotion": [
+            "愛される側への羨望",
+            "恵美に想われる存在への嫉妬"
+          ]
+        },
+
+        "humanity": {
+
+          "status": "maintained",
+
+          "important_rule": [
+            "最後まで姉であり続けた",
+            "人間性喪失なし"
+          ]
+        },
+
+        "termination": {
+
+          "final_state": "chapter5_end",
+
+          "termination_reason": [
+            "アルマ依存崩壊",
+            "存在維持限界"
+          ],
+
+          "final_emotion": [
+            "日常への執着",
+            "恵美への愛情"
+          ]
+        }
+      }
+    },
+
+    "prohibited_interpretations": [
+      "SATOMI_Bは別キャラ",
+      "SATOMI_Bは劣化コピー",
+      "全智美は同一状態",
+      "複製によって死が無効化された",
+      "智美は無限継続可能"
+    ],
+
+    "construction_status": {
+      "contradiction_check": {
+        "world_bundle": "NONE",
+        "world_rules": "NONE",
+        "dogma_json": "NONE",
+        "seat_json": "NONE",
+        "exceptions_json": "NONE",
+        "story_code": "NONE"
+      },
+
+      "safe_to_lock": true
+    }
+  }
+}

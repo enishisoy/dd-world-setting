@@ -1,0 +1,301 @@
+{
+  "SEAT": {
+    "seat_id": "S-3",
+    "seat_name": "アルマ",
+    "formal_name": "外界機構",
+    "host": "YAKUMO_SATOMI",
+    "canonical_status": "finalized_candidate",
+    "file_role": "3_SEAT.json",
+
+    "classification": {
+      "seat_class": "独立式",
+      "mechanism_type": "独立式条件機構",
+      "operation_type": "常駐・実体固定",
+      "phase": "独立",
+      "resident_layer": "物理層",
+      "visibility": "可",
+      "communication": "可",
+      "emotion_density": "極薄"
+    },
+
+    "core_definition": {
+      "summary": "智美の存在維持および創造出力を支える、外界由来エネルギー媒介型の席。",
+      "actual_role": [
+        "外界由来エネルギー供給",
+        "現実翻訳補助",
+        "構造維持供給",
+        "創造出力補助"
+      ],
+
+      "important_rule": [
+        "外界の意思そのものではない",
+        "外界が智美を選んだわけではない",
+        "人格神的存在ではない"
+      ]
+    },
+
+    "seat_structure": {
+
+      "seat_core": {
+        "definition": "席の本質情報を保持する核。",
+        "default_form": "休眠人形",
+
+        "properties": [
+          "通常手段では破壊不能",
+          "席情報保持",
+          "初期化後も残留"
+        ]
+      },
+
+      "initialization_rule": {
+        "description": "席は初期化時に感情・外見・反応傾向をリセットする。",
+
+        "reset_targets": [
+          "感情傾向",
+          "反応癖",
+          "人格偏差",
+          "外見傾向"
+        ],
+
+        "persistent_elements": [
+          "席核",
+          "基本構造",
+          "席番号"
+        ]
+      },
+
+      "appearance_dependency": {
+        "description": "席の姿・性質は接続イドの因子組や教義傾向によって変化する。",
+
+        "stable_case": "正統派因子組では安定した人型に近づく。",
+
+        "unstable_case": "歪な因子組では異形化・非人型化する可能性がある。"
+      }
+    },
+
+    "alma_current_form": {
+
+      "current_host": "YAKUMO_SATOMI",
+
+      "stability_rank": "high",
+
+      "reason": [
+        "S-3との高適合",
+        "比較的正統派因子組",
+        "安定した創造系接続"
+      ],
+
+      "visual_profile": {
+
+        "overall_impression": [
+          "中性的",
+          "人外的静寂",
+          "感情希薄",
+          "観測者的"
+        ],
+
+        "body": {
+          "age_appearance": "少年期",
+          "build": "細身",
+          "floating": "低空浮遊"
+        },
+
+        "hair": {
+          "color": "白銀",
+          "style": "長髪",
+          "parting": "センター分け"
+        },
+
+        "eyes": {
+          "color": "淡い青",
+          "expression": "感情変化が極めて薄い"
+        },
+
+        "horns": {
+          "type": "巻き角",
+          "color": "青",
+          "count": 2
+        },
+
+        "clothing": {
+          "style": "白黒基調ローブ",
+          "category": "観測者風長衣",
+          "length": "足首付近まで",
+          "barefoot": true
+        }
+      }
+    },
+
+    "communication_profile": {
+
+      "conversation_capability": true,
+
+      "speech_style": [
+        "簡潔",
+        "感情変化が薄い",
+        "事実優先",
+        "機械的傾向"
+      ],
+
+      "emotion_rule": {
+        "definition": "独立式は長期活動・観測・対話によって感情的偏差を形成する場合がある。",
+
+        "important_note": [
+          "人格神化ではない",
+          "観測蓄積による反応偏差"
+        ]
+      },
+
+      "alma_case": {
+
+        "emotion_density": "very_low",
+
+        "reason": [
+          "智美との対話量不足",
+          "最低限運用",
+          "観測学習不足"
+        ],
+
+        "observable_reactions": [
+          "僅かな怪訝反応",
+          "微細な沈黙",
+          "極小の感情揺れ"
+        ],
+
+        "detection_difficulty": "非常に高い"
+      }
+    },
+
+    "host_relation": {
+
+      "host_priority": "high",
+
+      "relation_type": [
+        "接続",
+        "供給",
+        "維持"
+      ],
+
+      "non_relations": [
+        "愛情",
+        "友情",
+        "救済",
+        "選定"
+      ],
+
+      "behavior_toward_host": [
+        "主人優先",
+        "供給継続",
+        "維持最優先"
+      ]
+    },
+
+    "functions": {
+
+      "energy_supply": {
+        "description": "外界由来エネルギーを現実側へ変換・供給する。",
+
+        "targets": [
+          "智美の存在維持",
+          "創造出力",
+          "構造安定"
+        ]
+      },
+
+      "reality_translation": {
+        "description": "外界由来情報・エネルギーを現実側で成立可能な形へ翻訳する。"
+      },
+
+      "maintenance_support": {
+        "description": "智美自身の構造崩壊を抑制する。"
+      }
+    },
+
+    "combat_profile": {
+
+      "combat_role": "支援特化",
+
+      "direct_combat": {
+        "capability": "低",
+
+        "note": "通常人間よりは強いが、単独戦闘型ではない。"
+      },
+
+      "battle_structure": {
+        "default_pattern": [
+          "アルマが供給",
+          "智美が創造で攻撃"
+        ]
+      }
+    },
+
+    "distance_limit": {
+
+      "host_distance": "短距離",
+
+      "reason": [
+        "常時供給必要",
+        "構造維持接続",
+        "現実翻訳維持"
+      ],
+
+      "long_distance_operation": "不向き"
+    },
+
+    "damage_and_recovery": {
+
+      "major_damage": {
+        "result": "因子層落下",
+
+        "description": "独立式は著しく損傷すると物理層活動を維持できず、因子層へ落下する。"
+      },
+
+      "immediate_recovery": {
+        "possible": true,
+
+        "cost": [
+          "イドへの高負担",
+          "維持エネルギー大量消費"
+        ]
+      },
+
+      "seat_core_rule": {
+        "description": "席核は通常物理手段・通常科学では破壊不能。"
+      },
+
+      "alma_destruction_case": {
+        "description": "アルマが活動不能になった場合、供給停止が発生する。",
+
+        "immediate_effect": [
+          "創造出力低下",
+          "維持能力低下"
+        ],
+
+        "delayed_effect": [
+          "智美構造崩壊",
+          "存在維持不能"
+        ]
+      }
+    },
+
+    "prohibited_interpretations": [
+      "外界が智美を選んだ",
+      "アルマが智美を愛している",
+      "アルマは神の使い",
+      "アルマは人格神",
+      "アルマは独立した救世存在",
+      "席は固定人格を持つ"
+    ],
+
+    "construction_status": {
+      "contradiction_check": {
+        "world_bundle": "NONE",
+        "world_rules": "NONE",
+        "dogma_json": "NONE",
+        "story_code": "NONE"
+      },
+
+      "safe_to_lock": true
+    }
+  }
+}

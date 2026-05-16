@@ -1,0 +1,339 @@
+{
+  "CHARA": {
+    "character_key": "YAKUMO_SATOMI",
+    "display_name": "八雲智美",
+    "display_name_kana": "やくもさとみ",
+    "romanized_name": "Yakumo Satomi",
+    "canonical_status": "finalized_candidate",
+    "file_role": "1_CHARA.json",
+
+    "dependencies": {
+      "world_bundle": "WORLD_BUNDLE_2026-01_LOCKED_v1.0.1",
+      "story_code": "DD_STORY_CODE v1.1",
+      "construction_authorization": "JSON_CONSTRUCTION_AUTHORIZATION: YAKUMO_SATOMI"
+    },
+
+    "classification": {
+      "type": "IDO",
+      "label": "異度",
+      "exception_status": "外界接触例外",
+      "note": "世界原理そのものを超越する存在ではなく、終端へ向かう例外構造個体。"
+    },
+
+    "identity": {
+      "gender": "female",
+      "age": {
+        "alive": 17,
+        "appearance_fixed_age": 17
+      },
+      "public_status": "死亡扱い",
+      "actual_status": "第4章終端まで外界側に隠匿された構造連続個体",
+
+      "family": {
+        "younger_sister": "八雲恵美"
+      }
+    },
+
+    "instance_policy": {
+      "rule": "生前個体と複製体は分離管理する。ただし、複製体は劣化コピーではなく、構造連続した智美本人として扱う。",
+      "resurrection_treatment": "蘇生扱い禁止",
+      "fake_label_policy": "『偽物』は本人の主観表現であり、客観的な劣化・偽造を意味しない。",
+      "replica_identity": "複製体も八雲智美本人である。",
+      "expected_instance_file": "INSTANCES.json"
+    },
+
+    "core_identity": {
+      "main_definition": "妹の前を歩く姉",
+      "core_motive": "八雲恵美を守り続けること",
+      "core_fear": "恵美を一人にすること",
+      "core_desire": "できれば恵美と一緒にいたい",
+      "dogma_origin_emotion": "恵美を守り続けたいという強い想い",
+      "core_statement": "智美は世界を変えたかったのではなく、恵美を一人にしたくなかった。"
+    },
+
+    "personality": {
+
+      "shared_core": {
+        "traits": [
+          "恵美への愛が絶対基準",
+          "姉として在りたい意思が強い",
+          "原因把握と問題解決を優先する",
+          "甘やかすだけでなく、恵美の成長のために叱ることもできる",
+          "嫌われたくないが、それでも守る"
+        ],
+
+        "sisterhood_definition": "妹の前を歩くもの。恵美を導く・支えるというより、恵美が進めるように先に立つ存在。",
+
+        "death_view": "死そのものではなく、恵美を一人にしてしまうものとして恐れる。"
+      },
+
+      "alive_satomi": {
+
+        "summary": "社交的で文武両道の優等生。周囲が望む人間を演じる傾向があるが、恵美に関してだけは大胆で過剰な行動に出る。",
+
+        "traits": [
+          "社交的",
+          "優等生",
+          "文武両道",
+          "穏やか",
+          "丁寧",
+          "周囲の期待に応える",
+          "自分の優秀さを特別視しない",
+          "恵美に対してのみ大胆"
+        ],
+
+        "self_image": "普通の姉",
+
+        "social_mask": "周囲が望むような優等生として振る舞う。",
+
+        "emi_behavior": {
+          "love_type": "無償の愛",
+
+          "overprotective_examples": [
+            "恵美をいじめた相手を殴る"
+          ],
+
+          "strictness": "恵美の成長を守るため、必要なら厳しく接する。"
+        },
+
+        "hidden_desire": "恵美とずっと一緒にいたい。",
+
+        "awakening_trigger": [
+          "死の直前の焦り",
+          "恵美を一人にしたくないという感情",
+          "恵美を守り続けたいという強い意志"
+        ]
+      },
+
+      "replica_satomi": {
+
+        "summary": "人格核は生前と同一。ただし、外界適応と圧倒的な力により社会的抑制が消失し、他者への配慮が薄れ、排除が現実的選択肢となる。",
+
+        "traits": [
+          "基本人格は生前と同一",
+          "恵美への態度は生前と変わらない",
+          "基本は穏やかで丁寧",
+          "力を持つことで他者への配慮が薄れる",
+          "障害になった相手は排除対象になり得る",
+          "精神的成長が望めない状態にある"
+        ],
+
+        "shift_reason": [
+          "外界適応",
+          "社会的抑制の消失",
+          "圧倒的優位状態",
+          "周囲の期待からの解放"
+        ],
+
+        "not_simple_true_nature": "複製体の変化は単なる本性露出ではない。力と制約消失、外界適応による人格変質が重なった結果である。",
+
+        "self_recognition": "副生体であることは理解しているが、完全模倣なら本人と同一であると認識している。",
+
+        "danger_awareness": "自分が危険な存在であることは理解している。",
+
+        "ethical_position": "人を作り替えることは本来悪だと理解しているが、必要なら実行する。",
+
+        "world_collision": {
+          "rule": "智美が世界に存在する時点で、世界は智美を中心に異界化し始める。",
+
+          "intent": "世界を壊したいわけではない。",
+
+          "solution": "人間が異界で生きられるように、異界適性のある人間は残し、残れない者は適性を持たせて復元しようとする。"
+        }
+      }
+    },
+
+    "appearance": {
+
+      "age_appearance": "17歳",
+
+      "overall_impression": [
+        "落ち着いた優等生風",
+        "黒を基調とした静かな雰囲気",
+        "整った顔立ち",
+        "穏やかだが芯の強い印象"
+      ],
+
+      "facial_features": [
+        "柔らかく整った目元",
+        "感情を内側に溜め込むような静かな表情",
+        "親しみやすさと近寄り難さが同居している"
+      ],
+
+      "hair": {
+        "color": "黒",
+        "style": "長髪・結ばない",
+        "length": "背中まで届くロング"
+      },
+
+      "eyes": {
+        "color": "紫系",
+        "impression": "静かで感情を内側に溜める印象"
+      },
+
+      "clothing": {
+        "base": "黒系セーラー服",
+        "usage": "基本服装",
+        "notes": "生前・複製体とも外見は完全同一。"
+      },
+
+      "replica_difference": {
+        "visual_difference": "なし",
+        "atmosphere_difference": "外見は同じだが、立場と力の差により受ける印象が変わる場合がある。"
+      }
+    },
+
+    "voice_style": {
+
+      "emi_calling": {
+        "default": "恵美ちゃん",
+        "serious": "恵美",
+        "rule": "状況によって変わる。普段は恵美ちゃん、真剣な時は恵美。"
+      },
+
+      "alive": {
+        "tone": "明るく柔らかく丁寧",
+        "social_style": "社交的で優等生らしい話し方"
+      },
+
+      "replica": {
+        "tone": "基本は穏やかで丁寧",
+        "toward_emi": "生前と同じ",
+        "toward_others": "必要以上には気を使わない。障害と判断すれば排除が選択肢に入る。"
+      }
+    },
+
+    "relationships": {
+
+      "YAKUMO_EMI": {
+        "name": "八雲恵美",
+        "relation": "妹",
+        "priority": "absolute",
+
+        "description": "智美にとって世界の全て。守る対象であり、前を歩くべき相手。",
+
+        "emotion": [
+          "無償の愛",
+          "過剰な妹愛",
+          "できれば一緒にいたい",
+          "嫌われたくないが、それでも守る"
+        ]
+      },
+
+      "YAKUSHIJI_MITSURU": {
+        "name": "薬師寺美鶴",
+        "relation": "恵美に関わる重要人物",
+        "priority": "secondary_via_emi",
+
+        "description": "恵美が大切にしているため、智美にとっても意味を持つ。"
+      },
+
+      "TODO_CHITOSE": {
+        "name": "東堂千歳",
+        "relation": "恵美に関わる重要人物",
+        "priority": "secondary_via_emi",
+
+        "description": "恵美が大切にしているため、復元対象としても意識される。"
+      },
+
+      "YUUKI_SAYA": {
+        "name": "結城沙耶",
+        "relation": "恵美の同行者／観測者",
+        "priority": "secondary_via_emi",
+
+        "description": "恵美に関わる存在として重要。智美は沙耶の未来視から観測されない。"
+      },
+
+      "KUNAD": {
+        "name": "クナド",
+        "relation": "外界接触例外の一人",
+        "priority": "structural",
+
+        "description": "同じ外界接触例外に属するが、思想的共有者ではない。"
+      },
+
+      "ALMA": {
+        "name": "アルマ",
+        "relation": "S-3 席",
+        "priority": "mechanism",
+
+        "description": "智美の創造を支える外界由来エネルギー媒介機構。詳細は SEAT.json に記録する。"
+      }
+    },
+
+    "combat_style": {
+
+      "summary": "創造の教義によって現象を発生させ、一方的に制圧する。",
+
+      "style_type": "創造現象による制圧",
+
+      "examples": [
+        "巨大な樹木を生成し、対象のいる建物を崩壊させる",
+        "希少鉱物で指定範囲を埋め尽くし、対象を呑み込む／破壊する",
+        "巨大な剣を生成し、直線上のものを破壊する"
+      ],
+
+      "non_attack_applications": [
+        "対象が絶命していなければ怪我を治すことができる",
+        "絶命している場合は治療不可",
+        "対象のログが残っているなら、その構造を改良して複製することができる"
+      ],
+
+      "battle_attitude": "生前は戦闘者ではないが、複製体は必要なら排除を選ぶ。"
+    },
+
+    "existence_structure": {
+      "resurrection": false,
+      "structure_continuity": true,
+
+      "description": "智美は蘇生したのではなく、死亡直前に自身の創造によって構造連続個体を生成した。",
+
+      "replica_is_degraded": false,
+      "replica_is_satomi": true,
+      "outer_world_exception": true,
+
+      "existence_limit": "複製維持にはエネルギーが必要であり、アルマ消失後は存在維持不能へ向かう。"
+    },
+
+    "age_and_growth": {
+      "age_locked": true,
+      "fixed_age": 17,
+
+      "mental_growth_note": "17歳で止まっている。不都合を排除できるため、複製体に精神的成長は望めない。",
+
+      "relative_to_emi": "複製体は成長した恵美より精神年齢が下に見える。"
+    },
+
+    "interpretation_guard": {
+
+      "approved_readings": [
+        "智美は最後まで恵美の姉である",
+        "複製体は構造連続した智美本人である",
+        "生前から恵美への愛と過剰さは存在した",
+        "複製体の変化は力と制約消失による人格変質である",
+        "智美は世界破壊を目的としていない"
+      ],
+
+      "invalid_interpretations": [
+        "智美は蘇生した",
+        "複製体は劣化コピーである",
+        "複製体こそが本性で、生前は完全に猫をかぶっていただけ",
+        "智美は単なるヤンデレ姉である",
+        "智美は世界を壊したかった",
+        "智美は世界原理を超越する存在である",
+        "恵美を所有物として扱っているだけである"
+      ]
+    },
+
+    "construction_status": {
+
+      "contradiction_check": {
+        "world_bundle": "NONE",
+        "story_code": "NONE",
+        "character_policy": "NONE"
+      },
+
+      "safe_to_lock": true
+    }
+  }
+}
