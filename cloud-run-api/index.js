@@ -27,7 +27,14 @@ async function fetchJsonFile(path) {
   const response = await fetch(url);
 
   if (!response.ok) {
-    return { ok: false, status: response.status, url, path };
+    return {
+      ok: false,
+      type: "FETCH_ERROR",
+      status: response.status,
+      statusText: response.statusText,
+      url,
+      path
+    };
   }
 
   const text = await response.text();
@@ -35,6 +42,7 @@ async function fetchJsonFile(path) {
   if (text.trim() === "") {
     return {
       ok: false,
+      type: "EMPTY_JSON",
       error: "Empty JSON file",
       url,
       path
@@ -42,24 +50,48 @@ async function fetchJsonFile(path) {
   }
 
   try {
-    return { ok: true, data: JSON.parse(text), url, path };
+    return {
+      ok: true,
+      data: JSON.parse(text),
+      url,
+      path
+    };
   } catch (error) {
     return {
       ok: false,
+      type: "JSON_PARSE_ERROR",
       error: error.message,
       url,
       path,
-      preview: text.slice(0, 300),
-      tail: text.slice(-300)
+      preview: text.slice(0, 500),
+      tail: text.slice(-500)
     };
   }
 }
 
-async function listJsonFiles(dir) {
+async function listJsonFiles(dir, diagnostics) {
   const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${ROOT}/${dir}?ref=${BRANCH}`;
   const response = await fetch(apiUrl);
 
+  diagnostics.directory_checks.push({
+    dir,
+    url: apiUrl,
+    ok: response.ok,
+    status: response.status,
+    statusText: response.statusText
+  });
+
   if (!response.ok) {
+    const text = await response.text();
+
+    diagnostics.directory_errors.push({
+      dir,
+      url: apiUrl,
+      status: response.status,
+      statusText: response.statusText,
+      body_preview: text.slice(0, 500)
+    });
+
     return [];
   }
 
@@ -67,13 +99,19 @@ async function listJsonFiles(dir) {
   let results = [];
 
   for (const item of items) {
+    diagnostics.scanned_items.push({
+      path: item.path,
+      name: item.name,
+      type: item.type
+    });
+
     if (item.type === "file" && item.name.endsWith(".json")) {
       results.push(`${dir}/${item.name}`);
     }
 
     if (item.type === "dir") {
       const childDir = `${dir}/${item.name}`;
-      const childFiles = await listJsonFiles(childDir);
+      const childFiles = await listJsonFiles(childDir, diagnostics);
       results = results.concat(childFiles);
     }
   }
@@ -85,7 +123,7 @@ app.get("/", (req, res) => {
   res.json({
     ok: true,
     service: "DD_WORLD API",
-    endpoints: ["/health", "/world"]
+    endpoints: ["/health", "/world", "/debug"]
   });
 });
 
@@ -95,29 +133,84 @@ app.get("/health", (req, res) => {
 
 app.get("/world", async (req, res) => {
   try {
+    const diagnostics = {
+      directory_checks: [],
+      directory_errors: [],
+      scanned_items: []
+    };
+
     const dynamicFiles = [
-      ...(await listJsonFiles("character")),
-      ...(await listJsonFiles("story"))
+      ...(await listJsonFiles("character", diagnostics)),
+      ...(await listJsonFiles("story", diagnostics))
     ];
 
     const allFiles = [...new Set([...FIXED_FILES, ...dynamicFiles])];
 
     const files = {};
+    const errorFiles = [];
 
     for (const file of allFiles) {
-      files[file] = await fetchJsonFile(file);
+      const result = await fetchJsonFile(file);
+      files[file] = result;
+
+      if (!result.ok) {
+        errorFiles.push({
+          path: file,
+          type: result.type,
+          error: result.error || result.statusText || result.status
+        });
+      }
     }
 
     res.json({
-      ok: true,
+      ok: errorFiles.length === 0 && diagnostics.directory_errors.length === 0,
       source: `https://github.com/${OWNER}/${REPO}/tree/${BRANCH}/${ROOT}`,
       total_files: allFiles.length,
+      dynamic_files_count: dynamicFiles.length,
+      error_files_count: errorFiles.length,
+      directory_errors_count: diagnostics.directory_errors.length,
+      dynamic_files: dynamicFiles,
+      error_files: errorFiles,
+      diagnostics,
       files
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      type: "SERVER_ERROR",
+      error: error.message,
+      stack: error.stack
+    });
+  }
+});
+
+app.get("/debug", async (req, res) => {
+  try {
+    const diagnostics = {
+      directory_checks: [],
+      directory_errors: [],
+      scanned_items: []
+    };
+
+    const characterFiles = await listJsonFiles("character", diagnostics);
+    const storyFiles = await listJsonFiles("story", diagnostics);
+
+    res.json({
+      ok: diagnostics.directory_errors.length === 0,
+      root: ROOT,
+      branch: BRANCH,
+      character_files_count: characterFiles.length,
+      story_files_count: storyFiles.length,
+      character_files: characterFiles,
+      story_files: storyFiles,
+      diagnostics
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      type: "DEBUG_SERVER_ERROR",
+      error: error.message,
+      stack: error.stack
     });
   }
 });
