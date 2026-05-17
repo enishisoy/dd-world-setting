@@ -1,7 +1,11 @@
 {
   "DOCTRINE": {
-    "doctrine_id": "D-18'",
+    "doctrine_id": "D-18A",
+    "file_safe_id": "DOGMA_D18A",
     "doctrine_name": "断罪",
+    "source_doctrine_id": "D-18",
+    "source_doctrine_name": "煉獄",
+    "alter_type": "継承変質",
     "factor_formula": "9+5+4",
 
     "essence": "対象の自責を切り離し、罪に対する裁定を成立させる",
@@ -43,17 +47,25 @@
         "悪人と判断した対象への殺意発生"
       ],
       "mental_load": "精神への継続的負荷",
-      "note": "第三章で制御を習得"
+      "control_note": "第三章で制御を習得"
     },
 
     "weapon_rules": {
       "danzai_sword": {
-        "emi_use": "裁定能力の発動",
-        "retty_use": "戦闘特化（青炎付与）"
-      },
-      "tradeoff": {
-        "description": "恵美が断罪剣を使用中、レティは著しく弱体化する",
-        "result": "戦闘能力が大幅低下"
+        "modes": {
+          "emi": {
+            "holder": "八雲恵美",
+            "effect": "裁定能力の発動"
+          },
+          "retty": {
+            "holder": "レティ",
+            "effect": "戦闘特化（青炎付与）"
+          }
+        },
+        "tradeoff": {
+          "description": "恵美が断罪剣を使用中、レティは著しく弱体化する",
+          "result": "戦闘能力が大幅低下"
+        }
       }
     },
 
@@ -68,6 +80,19 @@
       ]
     },
 
+    "compatibility": {
+      "highly_effective_against": [
+        "自責を抱えた対象",
+        "罪を認識している対象",
+        "現行犯状態の対象"
+      ],
+      "ineffective_against": [
+        "完全な愉悦犯",
+        "罪の認識を持たない存在",
+        "自責を持たない対象"
+      ]
+    },
+
     "philosophy": {
       "concept": "相手に許しの機会を与えるドグマ",
       "interpretation": "罪からの解放を与えるが、その結果は必ずしも救済とはならない"
@@ -77,6 +102,20 @@
       "即死能力ではない",
       "対象依存性が極めて高い",
       "単体で戦局を覆す能力ではない"
-    ]
+    ],
+
+    "invalid_interpretations": [
+      "万能の裁き能力",
+      "客観的な罪を自動判定する能力",
+      "対象の行為そのものを消す能力",
+      "被害や結果を修復する能力",
+      "自責のない対象を無条件で裁ける能力",
+      "即死能力"
+    ],
+
+    "construction_status": {
+      "canonical_status": "draft_after_id_normalization",
+      "safe_to_lock": true
+    }
   }
 }
