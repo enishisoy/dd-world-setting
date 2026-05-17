@@ -22,7 +22,7 @@
       },
       {
         "seat_id": "S-18",
-        "variant_id": "S-18'",
+        "variant_id": "S-18A",
         "base_seat_id": "S-18",
         "seat_name": "レティ",
         "canonical_holder": "YAKUMO_EMI",
@@ -40,7 +40,7 @@
     ],
     "notes": [
       "S-18は薬師寺美鶴期では未覚醒・因子層固定。",
-      "八雲恵美期のレティはS-18'として扱う。",
+      "八雲恵美期のレティはS-18Aとして扱う。",
       "詳細仕様はseats配下の個別JSONに分離する。"
     ]
   }
