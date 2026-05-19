@@ -164,12 +164,76 @@ app.get("/health", (req, res) => {
 app.get("/world", async (req, res) => {
   try {
 
+    // =========================
+    // SINGLE FILE / PATH MODE
+    // =========================
+    const fileQuery = req.query.file;
+    const pathQuery = req.query.path;
+
+    function getByDotPath(obj, dotPath) {
+      if (!dotPath) return obj;
+
+      return dotPath
+        .split(".")
+        .reduce((current, key) => {
+          if (
+            current &&
+            typeof current === "object" &&
+            key in current
+          ) {
+            return current[key];
+          }
+          return undefined;
+        }, obj);
+    }
+
+    if (fileQuery) {
+      const safeFile = String(fileQuery).replace(/^\/+/, "");
+
+      if (
+        safeFile.includes("..") ||
+        !safeFile.endsWith(".json")
+      ) {
+        return res.status(400).json({
+          ok: false,
+          status_type: "INVALID_FILE_QUERY",
+          message: "file must be a safe .json path under DD_WORLD"
+        });
+      }
+
+      const result = await fetchJsonFile(safeFile);
+
+      if (!result.ok) {
+        return res.status(404).json(result);
+      }
+
+      const picked = getByDotPath(result.data, pathQuery);
+
+      if (pathQuery && picked === undefined) {
+        return res.status(404).json({
+          ok: false,
+          status_type: "PATH_NOT_FOUND",
+          file: safeFile,
+          path: pathQuery
+        });
+      }
+
+      return res.json({
+        ok: true,
+        mode: pathQuery ? "single_path" : "single_file",
+        file: safeFile,
+        path: pathQuery || null,
+        data: picked
+      });
+    }
+
     const diagnostics = {
       directory_checks: [],
       directory_errors: [],
       scanned_items: []
     };
 
+    // ↓ 以降既存コード
     // =========================
     // FILE SCAN
     // =========================
