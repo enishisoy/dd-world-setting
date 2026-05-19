@@ -1,0 +1,70 @@
+{
+  "CHARACTER_REFERENCE_INDEX": {
+    "kunad": {
+      "key": "kunad",
+      "directory": "character/characters/KUNAD",
+      "files": [
+        "CHARA.json",
+        "DOGMA.json",
+        "PATCHES.json",
+        "SEAT.json",
+        "SPECIAL_RULES.json",
+        "STORY.json"
+      ]
+    },
+    "kuroda_hayato": {
+      "key": "kuroda_hayato",
+      "directory": "character/characters/KURODA_HAYATO",
+      "files": []
+    },
+    "miroku": {
+      "key": "miroku",
+      "directory": "character/characters/MIROKU",
+      "files": [
+        "CHARA.json",
+        "DOGMA.json",
+        "PATCHES.json",
+        "SEAT.json",
+        "SPECIAL_RULES.json",
+        "STORY.json"
+      ]
+    },
+    "yakumo_emi_v2": {
+      "key": "yakumo_emi_v2",
+      "directory": "character/characters/YAKUMO_EMI_V2",
+      "files": [
+        "CHARA.json",
+        "FACTOR.json",
+        "PATCHES.json",
+        "SEAT.json",
+        "SPECIAL_RULES.json",
+        "STORY.json"
+      ],
+      "subdirectories": {
+        "DOGMA": [
+          "D18_JUDGEMENT_BLADE.json",
+          "DOGMA_D18A.json",
+          "DOGMA_D-9.json"
+        ],
+        "seats": [
+          "KARMA_S9.json",
+          "LETTY_S18.json"
+        ]
+      }
+    },
+    "yakumo_satomi": {
+      "key": "yakumo_satomi",
+      "directory": "character/characters/YAKUMO_SATOMI",
+      "files": [
+        "CHARA.json",
+        "DOGMA.json",
+        "EXCEPTIONS.json",
+        "INSTANCES.json",
+        "PATCHES.json",
+        "SEAT.json",
+        "SPECIAL_RULES.json",
+        "STORY.json"
+      ]
+    }
+  }
+}
