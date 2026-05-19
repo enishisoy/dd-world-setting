@@ -17,18 +17,7 @@
         "奥多摩収監施設の誤認構造",
         "官庁街地下施設への限定アクセス",
         "施設情報の秘匿・改竄権限"
-      ],
-      "use_when": [
-        "政府施設へのアクセス権限を確認したい時",
-        "キャラクターがどの階層まで知っているか確認したい時",
-        "黒田・日下部麗子・結城教授の政府施設権限を参照したい時",
-        "奥多摩施設と皇居地下本丸の認識差を確認したい時"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/government_access_hierarchy.json",
-        "levels": "/world?file=world/government_access_hierarchy.json&path=GOVERNMENT_ACCESS_HIERARCHY_LOG.levels",
-        "level_5": "/world?file=world/government_access_hierarchy.json&path=GOVERNMENT_ACCESS_HIERARCHY_LOG.levels.LEVEL_5_FULL_ACCESS"
-      }
+      ]
     },
     "timeline_master": {
       "key": "timeline_master",
@@ -46,21 +35,7 @@
         "章ごとのテーマ",
         "全体構造",
         "時間順と観測順の差異"
-      ],
-      "use_when": [
-        "章の年代を確認したい時",
-        "第一章から第五章までの順番を確認したい時",
-        "各章の主要イベントを確認したい時",
-        "第五章が第四章直後か確認したい時",
-        "章ごとのテーマや構造を参照したい時"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/timeline_master.json",
-        "all_chapters": "/world?file=world/timeline_master.json&path=TIMELINE_MASTER.series_timeline",
-        "chapter_1": "/world?file=world/timeline_master.json&path=TIMELINE_MASTER.series_timeline.chapter_1",
-        "chapter_5": "/world?file=world/timeline_master.json&path=TIMELINE_MASTER.series_timeline.chapter_5",
-        "series_structure": "/world?file=world/timeline_master.json&path=TIMELINE_MASTER.series_structure"
-      }
+      ]
     },
     "world_bundle": {
       "key": "world_bundle",
@@ -83,24 +58,6 @@
         "同時席使用",
         "クナド例外",
         "死の原理"
-      ],
-      "recommended_for": [
-        "世界観全体を最初に理解したい時",
-        "DDシリーズの基本原理を確認したい時",
-        "WORLD_LOGとWORLD_RULESを横断参照したい時",
-        "AI初期読込",
-        "RAG初期コンテキスト"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/world_bundle.json",
-        "core_concepts": "/world?file=world/world_bundle.json&path=world_bundle.core_concepts",
-        "outer_world": "/world?file=world/world_bundle.json&path=world_bundle.outer_world",
-        "special_rules": "/world?file=world/world_bundle.json&path=world_bundle.special_rules"
-      },
-      "special_notes": [
-        "詳細設定は各参照先ログへ委任される",
-        "完全定義ではなく統合入口として扱う",
-        "世界観共有時の最優先参照ファイル"
       ]
     },
     "world_log": {
@@ -133,28 +90,6 @@
         "IDO死亡後の自立席行動",
         "Overdress",
         "席完全消滅の例外"
-      ],
-      "use_when": [
-        "DD世界の根本原理を確認したい時",
-        "外界とは何かを確認したい時",
-        "世界修正力・ログデリート・異界化のルールを確認したい時",
-        "死の不可逆性や終端原理を確認したい時",
-        "ラクアやクナドなどの外界干渉系能力と世界原理の整合を確認したい時",
-        "席同士の衝突・異界濃度・電子機器干渉を確認したい時"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/world_log.json",
-        "outer_world": "/world?file=world/world_log.json&path=WORLD_LOG.outer_world",
-        "outer_world_randomness": "/world?file=world/world_log.json&path=WORLD_LOG.outer_world_randomness",
-        "world_correction_principle": "/world?file=world/world_log.json&path=WORLD_LOG.world_correction_principle",
-        "trace_world_model": "/world?file=world/world_log.json&path=WORLD_LOG.trace_world_model",
-        "log_structure_model": "/world?file=world/world_log.json&path=WORLD_LOG.log_structure_model",
-        "independent_seat_reconstruction": "/world?file=world/world_log.json&path=WORLD_LOG.independent_seat_reconstruction"
-      },
-      "notes": [
-        "WORLD_RULESより上位の世界原理ログとして扱う",
-        "運用ルールの詳細はworld_rules.jsonへ委任される",
-        "キャラクター個別設定ではなく、世界そのものの前提を管理する"
       ]
     },
     "world_map_tokyo": {
@@ -178,29 +113,6 @@
         "第二章PART07戦場構造",
         "偽の本丸と真の本丸の配置",
         "政府施設の表向き機能と秘匿機能"
-      ],
-      "use_when": [
-        "DD世界の地理構造を確認したい時",
-        "奥多摩施設・霞が関・皇居地下本丸の位置関係を確認したい時",
-        "第二章の戦場構造を確認したい時",
-        "クナド勢拠点や政府拠点の場所を確認したい時",
-        "ロケーションの表向き機能と真の機能を確認したい時"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/world_map_tokyo.json",
-        "macro_structure": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.macro_structure",
-        "kasukabe": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.kasukabe",
-        "ouji": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.ouji",
-        "okutama": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.oku_tama",
-        "kasumigaseki": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.kasumigaseki",
-        "imperial_palace": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.imperial_palace",
-        "underground_connection": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.underground_connection",
-        "part_07_battle_overlay": "/world?file=world/world_map_tokyo.json&path=WORLD_MAP_LOG.part_07_battle_overlay"
-      },
-      "notes": [
-        "人物配置・時系列移動は含まない",
-        "アクセス権限はworld/government_access_hierarchy.jsonを参照する",
-        "ロケーション検索にはworld/location_index.jsonも併用する"
       ]
     },
     "world_rules": {
@@ -227,30 +139,6 @@
         "Backfire",
         "感染",
         "席挙動原則"
-      ],
-      "use_when": [
-        "席運用ルールを確認したい時",
-        "Backfireの定義を確認したい時",
-        "同化式・顕現式・独立式の違いを確認したい時",
-        "席再構成や席完全消滅を確認したい時",
-        "ラクアゲームなどの世界整合性を確認したい時",
-        "感染・複合因子・同時席使用を確認したい時"
-      ],
-      "api_examples": {
-        "full_file": "/world?file=world/world_rules.json",
-        "absolute_limits": "/world?file=world/world_rules.json&path=WORLD_RULES.absolute_limits",
-        "seat_management_states": "/world?file=world/world_rules.json&path=WORLD_RULES.seat_management_states",
-        "factor_rule": "/world?file=world/world_rules.json&path=WORLD_RULES.factor_rule",
-        "simultaneous_seat_use": "/world?file=world/world_rules.json&path=WORLD_RULES.simultaneous_seat_use",
-        "seat_presence_layers": "/world?file=world/world_rules.json&path=WORLD_RULES.seat_presence_layers",
-        "seat_operation_classes": "/world?file=world/world_rules.json&path=WORLD_RULES.seat_operation_classes",
-        "backfire_definition": "/world?file=world/world_rules.json&path=WORLD_RULES.backfire_definition",
-        "infection_model": "/world?file=world/world_rules.json&path=WORLD_RULES.infection_model"
-      },
-      "notes": [
-        "世界原理そのものはWORLD_LOGを参照する",
-        "個別能力定義はCHARACTER_LOG・DOGMA_LOGへ委任される",
-        "世界の『仕組み』ではなく『運用』を定義する"
       ]
     }
   }
