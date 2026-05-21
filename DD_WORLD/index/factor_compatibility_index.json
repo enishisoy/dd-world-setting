@@ -18,42 +18,15 @@
       "note": "既存のPOST_CHARACTER_LOG_LOCK参照制限と衝突するため、正式運用変更には別途PROCEDURE_PATCHが必要。"
     },
     "factor_terms": {
-      "1_EXISTENCE": {
-        "number": 1,
-        "jp": "存在"
-      },
-      "2_BOUNDARY": {
-        "number": 2,
-        "jp": "境界"
-      },
-      "3_INTERFERENCE": {
-        "number": 3,
-        "jp": "干渉"
-      },
-      "4_ORDER": {
-        "number": 4,
-        "jp": "秩序"
-      },
-      "5_INHERITANCE": {
-        "number": 5,
-        "jp": "継承"
-      },
-      "6_ACCEPTANCE": {
-        "number": 6,
-        "jp": "受容"
-      },
-      "7_LEAP": {
-        "number": 7,
-        "jp": "跳躍"
-      },
-      "8_NEGATION": {
-        "number": 8,
-        "jp": "否定"
-      },
-      "9_CRITICALITY": {
-        "number": 9,
-        "jp": "臨界"
-      }
+      "1_EXISTENCE": { "number": 1, "jp": "存在" },
+      "2_BOUNDARY": { "number": 2, "jp": "境界" },
+      "3_INTERFERENCE": { "number": 3, "jp": "干渉" },
+      "4_ORDER": { "number": 4, "jp": "秩序" },
+      "5_INHERITANCE": { "number": 5, "jp": "継承" },
+      "6_ACCEPTANCE": { "number": 6, "jp": "受容" },
+      "7_LEAP": { "number": 7, "jp": "跳躍" },
+      "8_NEGATION": { "number": 8, "jp": "否定" },
+      "9_CRITICALITY": { "number": 9, "jp": "臨界" }
     },
     "compatibility_terms": {
       "SELF": {
@@ -176,6 +149,62 @@
         "7_LEAP": "PARADOX",
         "8_NEGATION": "PARADOX",
         "9_CRITICALITY": "SELF"
+      }
+    },
+    "factor_composition_rules": {
+      "overview": {
+        "description": "一部因子は複合時、単独因子とは異なる構造演算的役割を持つ。",
+        "note": [
+          "因子順序は意味を持つ",
+          "複合因子は単純加算ではない",
+          "特定因子は位置依存作用を持つ"
+        ]
+      },
+      "factor_2_boundary": {
+        "classification": "structural_operator_factor",
+        "base_meaning": "境界",
+        "special_property": [
+          "複合因子時に構造演算子として作用する"
+        ],
+        "prefix_rule": {
+          "pattern": "2 + X",
+          "effect": [
+            "Xの対象範囲を定義",
+            "Xとの境界を形成",
+            "Xを局所化・対象化"
+          ],
+          "examples": [
+            "2+8"
+          ]
+        },
+        "postfix_rule": {
+          "pattern": "X × 2",
+          "effect": [
+            "直前因子Xを分裂",
+            "Xを複製",
+            "Xを並列化",
+            "Xの接続先を増殖"
+          ],
+          "examples": [
+            "1×2",
+            "5×2"
+          ]
+        },
+        "interpretation_notes": [
+          "強化ではなく構造変化",
+          "出力上昇を保証しない",
+          "世界構造・存在定義へ影響しやすい"
+        ],
+        "relation_to_sphere_node": [
+          "ノード境界定義",
+          "接続対象分離",
+          "外界侵食境界",
+          "スフィア内外区分"
+        ],
+        "warning": [
+          "複合時の意味は宿主・席・文脈によって変化する",
+          "絶対的固定演算ではない"
+        ]
       }
     },
     "usage_restrictions": [
